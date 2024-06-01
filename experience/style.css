@@ -65,17 +65,34 @@ section{
 .heading span{
   color: rgb(115, 3, 167);
 }
-header .logo{
+header .logo {
   font-size: 1.9rem;
   font-weight: 800;
   text-decoration: none;
-  color: #0E2431;
+  color: #0e2431;
 }
 header .logo i {
   font-size: 2.2rem;
 }
 header .logo:hover {
   color: #fc8c05;
+}
+header .default-logo{
+  position:absolute;
+  height: 2.2rem;
+  object-fit: cover;
+}
+header .logo:hover .default-logo{
+  position: absolute;
+  opacity: 0;
+}
+header .color-logo{
+  height: 2.2rem;
+  object-fit: cover;
+  opacity:0;
+}
+header .logo:hover .color-logo{
+  opacity: 1;
 }
 header .navbar ul{
   list-style: none;
