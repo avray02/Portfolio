@@ -25,7 +25,7 @@
     "image": "unitraj",
     "category": "MA4 course project",
     "links": {
-      "view": "",
+      "view": "assets/images/cv.pdf",
       "code": ""
     }
   },
@@ -82,7 +82,7 @@
   {
     "name": "Microcontrollers",
     "desc": "",
-    "image": "",
+    "image": "micro",
     "category": "BA4 course project",
     "links": {
       "view": "",
@@ -92,7 +92,7 @@
   {
     "name": "Mecanism design",
     "desc": "",
-    "image": "",
+    "image": "silex",
     "category": "BA4 course project",
     "links": {
       "view": "",
@@ -102,7 +102,7 @@
   {
     "name": "Logic systems",
     "desc": "",
-    "image": "",
+    "image": "syslog",
     "category": "BA3 course project",
     "links": {
       "view": "",
@@ -112,7 +112,7 @@
   {
     "name": "Mechanical construction",
     "desc": "",
-    "image": "",
+    "image": "semoir",
     "category": "BA2 course project",
     "links": {
       "view": "",
@@ -122,7 +122,7 @@
   {
     "name": "Archipelago",
     "desc": "",
-    "image": "",
+    "image": "archipelago",
     "category": "BA2 course project",
     "links": {
       "view": "",
