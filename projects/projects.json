@@ -3,9 +3,10 @@
     "name": "Traction Control | EPFL RT",
     "desc": "State estimation and traction control for a student racing car. With autonomous driving capabilities.",
     "image": "epflrt",
-    "category": "semester project",
+    "category": "control",
+    "type": "MA2 semester project",
     "links": {
-      "view": "",
+      "report": "epflrt",
       "code": ""
     }
   },
@@ -13,119 +14,133 @@
     "name": "Microgrid control",
     "desc": "Control of a microgrid with multiple energy sources and loads. Using state of the art data driven methods. Considering delays uncertainty in the grid.",
     "image": "microgrid",
-    "category": "semester project",
+    "category": "control",
+    "type": "MA3 semester project",
     "links": {
-      "view": "",
+      "report": "microgrid",
       "code": ""
     }
   },
   {
     "name": "Trajectory prediction",
-    "desc": "",
+    "desc": "In the context of autonomous driving, this project aims at predicting the trajectory of vehicles in a highway using state of the art deep learning methods.",
     "image": "unitraj",
-    "category": "MA4 course project",
+    "category": "vision",
+    "type": "MA4 course project",
     "links": {
-      "view": "assets/images/cv.pdf",
-      "code": ""
+      "report": "unitraj",
+      "poster": "unitraj",
+      "code": "https://github.com/vita-student-projects/The-bests-unitraj.git"
     }
   },
   {
     "name": "Coin detector",
-    "desc": "",
+    "desc": "From a small dataset, this project aims at detecting and classify coins in images paying attention on out of distribution coins.",
     "image": "coin",
-    "category": "MA4 course project",
+    "category": "vision",
+    "type": "MA4 course project",
     "links": {
-      "view": "",
-      "code": ""
+      "report": "",
+      "code": "https://github.com/avray02/iapr_proj.git"
     }
   },
   {
-    "name": "LisEagle control",
-    "desc": "",
+    "name": "LisEagle RL control",
+    "desc": "In the context on sim2real control strategy, this project compare robustness between end-to-en RL controller and using a INDI low level controller.",
     "image": "liseagle",
-    "category": "MA4 course project",
+    "category": "control",
+    "type": "MA4 course project",
     "links": {
-      "view": "",
+      "report": "liseagle",
+      "poster": "liseagle",
       "code": ""
     }
   },
   {
-    "name": "Thymio full automatisation process",
-    "desc": "",
+    "name": "Thymio full automatisation",
+    "desc": "From vision to planning and control, this mini projects englobe all aspects of robotics.",
     "image": "thymio",
-    "category": "MA1 course project",
+    "category": "control vision",
+    "type": "MA1 course project",
     "links": {
-      "view": "",
-      "code": ""
+      "report": "",
+      "code": "projects/codes/thymio.ipynb"
     }
   },
   {
     "name": "Legged robots control",
-    "desc": "",
+    "desc": "Using RL methods, this project aims at controlling a legged robot to walk in a straight line.",
     "image": "legged",
-    "category": "MA1 course project",
+    "category": "control",
+    "type": "MA1 course project",
     "links": {
-      "view": "",
+      "report": "legged",
       "code": ""
     }
   },
   {
     "name": "Cooperative navigation",
-    "desc": "",
+    "desc": "How to navigate in a coopertive way in a maze with multiple robots. Using state estimation methods.",
     "image": "coopnav",
-    "category": "BA6 course project",
+    "category": "navigation",
+    "type": "BA6 course project",
     "links": {
-      "view": "",
+      "report": "navigation",
       "code": ""
     }
   },
   {
     "name": "Microcontrollers",
-    "desc": "",
+    "desc": "From the ground up, this project aims at understanding the basics of microcontrollers. Using assembly code only.",
     "image": "micro",
-    "category": "BA4 course project",
+    "category": "electronics",
+    "type": "BA4 course project",
     "links": {
-      "view": "",
+      "report": "microcontroller",
       "code": ""
     }
   },
   {
     "name": "Mecanism design",
-    "desc": "",
+    "desc": "Can we build a cardan at micro scale? This project aims at designing a cardan at micro scale using flexible guidance.",
     "image": "silex",
-    "category": "BA4 course project",
+    "category": "mechanics",
+    "type": "BA4 course project",
     "links": {
-      "view": "",
+      "report": "silex",
       "code": ""
     }
   },
   {
     "name": "Logic systems",
-    "desc": "",
+    "desc": "Create a logic system using only NAND gates. This project aims at understanding the basics of logic systems.",
     "image": "syslog",
-    "category": "BA3 course project",
+    "category": "electronics",
+    "type": "BA3 course project",
     "links": {
-      "view": "",
+      "report": "syslog",
       "code": ""
     }
   },
   {
     "name": "Mechanical construction",
-    "desc": "",
+    "desc": "From ideas, to design. This project aims at understanding the basics of mechanical construction.",
     "image": "semoir",
-    "category": "BA2 course project",
+    "category": "mechanics",
+    "type": "BA2 course project",
     "links": {
-      "view": "",
+      "report": "semoir",
       "code": ""
     }
   },
   {
     "name": "Archipelago",
-    "desc": "",
+    "desc": "My first IT project as part of a team involved developing an optimized pathfinding solution utilizing the Dijkstra algorithm to create a faster wayfinding system.",
     "image": "archipelago",
-    "category": "BA2 course project",
+    "category": "IT",
+    "type": "BA2 course project",
     "links": {
-      "view": "",
+      "report": "",
       "code": ""
     }
   }

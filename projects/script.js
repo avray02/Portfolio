@@ -20,12 +20,12 @@ $(document).ready(function () {
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
-            document.title = "Projects | Portfolio Jigar Sable";
-            $("#favicon").attr("href", "/assets/images/favicon.png");
+            document.title = "Projects | A.Vray";
+            $("#favicon").attr("href", "/assets/images/logo/white.png");
         }
         else {
             document.title = "Come Back To Portfolio";
-            $("#favicon").attr("href", "/assets/images/favhand.png");
+            $("#favicon").attr("href", "/assets/images/logo/white.png");
         }
     });
 
@@ -55,8 +55,9 @@ function showProjects(projects) {
         <div class="desc">
           <p>${project.desc}</p>
           <div class="btns">
-            <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+            ${project.links.report ? `<a href="reports/${project.links.report}.pdf" class="btn" target="_blank"><i class="fas fa-file-pdf"></i> Report</a>` : ""}
+            ${project.links.poster ? `<a href="posters/${project.links.poster}.pdf" class="btn" target="_blank"><i class="fas fa-eye"></i> Poster</a>` : ""}
+            ${project.links.code ? `<a href="${project.links.code}" class="btn" target="_blank"><i class="fas fa-code"></i> Code</a>` : ""}
           </div>
         </div>
       </div>

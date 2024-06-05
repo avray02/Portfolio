@@ -59,19 +59,19 @@ $(document).ready(function () {
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
-            document.title = "Portfolio | Jigar Sable";
-            $("#favicon").attr("href", "assets/images/favicon.png");
+            document.title = "Portfolio | A.VRAY";
+            $("#favicon").attr("href", "assets/images/logo/white.png");
         }
         else {
             document.title = "Come Back To Portfolio";
-            $("#favicon").attr("href", "assets/images/favhand.png");
+            $("#favicon").attr("href", "assets/images/logo/white.png");
         }
     });
 
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["control theory", "computer vision", "machine learning", "deep learning"],
+    strings: ["control theory", "reinforcement learning", "computer vision", "machine learning", "robotics", "deep learning"],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
@@ -107,25 +107,27 @@ function showSkills(skills) {
 function showProjects(projects) {
     let projectsContainer = document.querySelector("#work .box-container");
     let projectHTML = "";
-    projects.slice(0, 10).filter(project => project.category != "android").forEach(project => {
+    projects.slice(0, 10).filter(project => project.type.startsWith("MA")).forEach(project => {
         projectHTML += `
         <div class="box tilt">
-      <img draggable="false" src="projects/images/${project.image}.png" alt="project" />
-      <div class="content">
-        <div class="tag">
-        <h3>${project.name}</h3>
-        </div>
-        <div class="desc">
-          <p>${project.desc}</p>
-          <div class="btns">
-            <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>`
+            <img draggable="false" src="projects/images/${project.image}.png" alt="project" />
+            <div class="content">
+                <div class="tag">
+                    <h3>${project.name}</h3>
+                </div>
+                <div class="desc">
+                    <p>${project.desc}</p>
+                    <div class="btns">
+                        ${project.links.report ? `<a href="projects/reports/${project.links.report}.pdf" class="btn" target="_blank"><i class="fas fa-file-pdf"></i> Report</a>` : ""}
+                        ${project.links.poster ? `<a href="projects/posters/${project.links.poster}.pdf" class="btn" target="_blank"><i class="fas fa-eye"></i> Poster</a>` : ""}
+                        ${project.links.code ? `<a href="${project.links.code}" class="btn" target="_blank"><i class="fas fa-code"></i> Code</a>` : ""}
+                    </div>
+                </div>
+            </div>
+        </div>`;
     });
     projectsContainer.innerHTML = projectHTML;
+    
 
     // <!-- tilt js effect starts -->
     VanillaTilt.init(document.querySelectorAll(".tilt"), {

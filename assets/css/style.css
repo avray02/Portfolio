@@ -731,12 +731,12 @@ header .navbar ul li a:hover {
 .work .desc .btns .btn {
   line-height: 0;
   display: inline;
-  padding: 1.5rem 2.5rem;
-  border-radius: 0.5rem;
+  padding: 1.5rem 2rem;
+  border-radius: .5rem;
   font-size: 1.5rem;
   color: #fff;
   background: rgb(12, 12, 12);
-  margin-right: 2rem;
+  margin-right: .5rem;
 }
 .work .desc .btns .btn:hover {
   background: #310ae0f5;
