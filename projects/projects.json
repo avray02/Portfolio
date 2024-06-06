@@ -46,7 +46,7 @@
   },
   {
     "name": "LisEagle RL control",
-    "desc": "In the context on sim2real control strategy, this project compare robustness between end-to-en RL controller and using a INDI low level controller.",
+    "desc": "In the context on sim2real control strategy, this project compare robustness between end-to-end RL controller and a cascaded controller with INDI low level controller.",
     "image": "liseagle",
     "category": "control",
     "type": "MA4 course project",
@@ -69,7 +69,7 @@
   },
   {
     "name": "Legged robots control",
-    "desc": "Using RL methods, this project aims at controlling a legged robot to walk in a straight line.",
+    "desc": "Using RL methods, this project aims to control a legged robot to walk in a straight line.",
     "image": "legged",
     "category": "control",
     "type": "MA1 course project",
