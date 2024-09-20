@@ -24,6 +24,14 @@
         "icon": "skills/images/opencv.png"
     },
     {
+        "name": "Scikit-image",
+        "icon": "skills/images/skimage.png"
+    },
+    {
+        "name": "Dataiku",
+        "icon": "skills/images/dataiku.png"
+    },
+    {
         "name": "SQL",
         "icon": "skills/images/SQL.png"
     },
