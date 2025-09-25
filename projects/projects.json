@@ -10,6 +10,28 @@
       "code": ""
     }
   },
+   {
+    "name": "Defect Detection | Rolex SA",
+    "desc": "Using deep learning methods to detect defects on watch components in the context of industrial quality control.",
+    "image": "rolex_landweller",
+    "category": "vision",
+    "type": "Master project",
+    "links": {
+      "report": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "Realistic rendering optimisation | Rolex SA",
+    "desc": "Using deep learning methods to enhance the rendering quality of watch components.",
+    "image": "rolex_daydate",
+    "category": "vision",
+    "type": "Master internship",
+    "links": {
+      "report": "",
+      "code": ""
+    }
+  },
   {
     "name": "Microgrid control",
     "desc": "Control of a microgrid with multiple energy sources and loads. Using state of the art data driven methods. Considering delays uncertainty in the grid.",
