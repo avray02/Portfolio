@@ -107,7 +107,8 @@ function showSkills(skills) {
 function showProjects(projects) {
     let projectsContainer = document.querySelector("#work .box-container");
     let projectHTML = "";
-    projects.slice(0, 10).filter(project => project.type.startsWith("MA")).forEach(project => {
+    const featuredProjects = ["Traction Control | EPFL RT", "Defect Detection | Rolex SA", "Trajectory prediction","Legged robots control","Microgrid control",];
+projects.filter(project => featuredProjects.includes(project.name)).forEach(project => {
         projectHTML += `
         <div class="box tilt">
             <img draggable="false" src="projects/images/${project.image}.png" alt="project" />
