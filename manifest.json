@@ -1,0 +1,39 @@
+{
+  "name": "Alexandre Vray - Robotics Engineer Portfolio",
+  "short_name": "A.Vray Portfolio",
+  "description": "Professional portfolio of Alexandre Vray, Robotics Engineer specialized in machine learning and computer vision",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f7f7",
+  "theme_color": "#7303a7",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "./assets/images/logo/white.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/images/logo/black.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "portfolio", "professional"],
+  "lang": "en-US",
+  "screenshots": [
+    {
+      "src": "./assets/images/screenshot-desktop.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "./assets/images/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
+}
