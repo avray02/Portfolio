@@ -81,10 +81,13 @@ var typed = new Typed(".typing-text", {
 
 async function fetchData(type = "skills") {
     let response
-    type === "skills" ?
+    if (type === "skills") {
         response = await fetch("skills.json")
-        :
+    } else if (type === "config") {
+        response = await fetch("config.json")
+    } else {
         response = await fetch("./projects/projects.json")
+    }
     const data = await response.json();
     return data;
 }
@@ -104,11 +107,23 @@ function showSkills(skills) {
     skillsContainer.innerHTML = skillHTML;
 }
 
-function showProjects(projects) {
+async function showProjects(projects) {
     let projectsContainer = document.querySelector("#work .box-container");
     let projectHTML = "";
-    const featuredProjects = ["Traction Control | EPFL RT", "Defect Detection | Rolex SA", "Trajectory prediction","Legged robots control","Microgrid control",];
-projects.filter(project => featuredProjects.includes(project.name)).forEach(project => {
+    
+    // Récupérer la configuration
+    const config = await fetchData("config");
+    const featuredProjects = config.featured.projects;
+    const maxProjects = config.display.maxProjectsOnHome;
+    
+    // Filtrer et limiter les projets
+    let selectedProjects = projects;
+    if (config.display.showOnlyFeatured) {
+        selectedProjects = projects.filter(project => featuredProjects.includes(project.name));
+    }
+    selectedProjects = selectedProjects.slice(0, maxProjects);
+    
+    selectedProjects.forEach(project => {
         projectHTML += `
         <div class="box tilt">
             <img draggable="false" src="projects/images/${project.image}.png" alt="project" />
@@ -153,8 +168,8 @@ fetchData().then(data => {
     showSkills(data);
 });
 
-fetchData("projects").then(data => {
-    showProjects(data);
+fetchData("projects").then(async data => {
+    await showProjects(data);
 });
 
 // <!-- tilt js effect starts -->

@@ -1,0 +1,20 @@
+{
+  "featured": {
+    "projects": [
+      "Traction Control | EPFL RT",
+      "Defect Detection | Rolex SA",
+      "Microgrid control",
+      "Trajectory prediction",
+      "Legged robots control"
+    ],
+    "experiences": [
+      "Rolex SA",
+      "EPFL Racing Team"
+    ]
+  },
+  "display": {
+    "maxProjectsOnHome": 6,
+    "maxExperiencesOnHome": 3,
+    "showOnlyFeatured": true
+  }
+}

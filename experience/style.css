@@ -66,10 +66,14 @@ section{
   color: rgb(115, 3, 167);
 }
 header .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
   font-size: 1.9rem;
   font-weight: 800;
   text-decoration: none;
   color: #0e2431;
+  position: relative;
 }
 header .logo i {
   font-size: 2.2rem;
@@ -78,18 +82,24 @@ header .logo:hover {
   color: #fc8c05;
 }
 header .default-logo{
-  position:absolute;
   height: 2.2rem;
-  object-fit: cover;
+  width: auto;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
 }
 header .logo:hover .default-logo{
-  position: absolute;
   opacity: 0;
 }
 header .color-logo{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   height: 2.2rem;
-  object-fit: cover;
-  opacity:0;
+  width: auto;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 header .logo:hover .color-logo{
   opacity: 1;
@@ -311,33 +321,48 @@ header .navbar ul li a:hover{
   transform: translateX(-8px);
 }
 
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
+/* Timeline responsive design improvements */
+@media screen and (max-width: 768px) {
   .experience .timeline::after {
-  left: 31px;
+    left: 31px;
   }
   .experience .container {
-  width: 100%;
-  padding-left: 70px;
-  padding-right: 25px;
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
   }
   .experience .container::before {
-  left: 60px;
-  border: medium solid #f68c09;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent #f68c09 transparent transparent;
+    left: 60px;
+    border: medium solid #f68c09;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #f68c09 transparent transparent;
   }
-  .experience .left::after {
-    left: 15px;
-  }
+  .experience .left::after,
   .experience .right::after {
     left: 15px;
   }
   .experience .right {
-  left: 0%;
+    left: 0%;
   }
   .experience .container::after {
-    font-size: 2.2rem;;
+    font-size: 2.2rem;
+  }
+}
+
+/* Better desktop centering */
+@media screen and (min-width: 769px) {
+  .experience .timeline {
+    max-width: 1000px;
+    margin: 2rem auto;
+  }
+  .experience .container {
+    width: 50%;
+  }
+  .experience .left {
+    left: 0;
+  }
+  .experience .right {
+    left: 50%;
   }
 }
 /* experience media queries ends */
