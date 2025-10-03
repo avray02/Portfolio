@@ -33,7 +33,7 @@ $(document).ready(function () {
 });
 
 async function fetchProjects() {
-    const response = await fetch("/projects/projects.json");
+    const response = await fetch("./projects.json");
     const data = await response.json();
     return data;
 }
@@ -71,24 +71,24 @@ async function showAllProjects(filter = 'all') {
         // Créer la liste des liens disponibles
         let linksHTML = '';
         if (project.links.report) {
-            linksHTML += `<a href="/projects/reports/${project.links.report}.pdf" class="btn" target="_blank" title="Report">
+            linksHTML += `<a href="./reports/${project.links.report}.pdf" class="btn" target="_blank" title="Report">
                 <i class="fas fa-file-pdf"></i>
             </a>`;
         }
         if (project.links.poster) {
-            linksHTML += `<a href="/projects/posters/${project.links.poster}.pdf" class="btn" target="_blank" title="Poster">
+            linksHTML += `<a href="./posters/${project.links.poster}.pdf" class="btn" target="_blank" title="Poster">
                 <i class="fas fa-image"></i>
             </a>`;
         }
         if (project.links.code) {
-            linksHTML += `<a href="/projects/codes/${project.links.code}" class="btn" target="_blank" title="Code">
+            linksHTML += `<a href="./codes/${project.links.code}" class="btn" target="_blank" title="Code">
                 <i class="fas fa-code"></i>
             </a>`;
         }
         
         projectHTML += `
         <div class="box">
-            <img draggable="false" src="/projects/images/${project.image}.png" alt="${project.name}" />
+            <img draggable="false" src="./images/${project.image}.png" alt="${project.name}" />
             <div class="project-title-overlay">
                 <h3>${project.name}</h3>
             </div>
