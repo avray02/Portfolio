@@ -17,19 +17,6 @@ $(document).ready(function(){
     });
 });
 
-/* ===== SCROLL REVEAL ANIMATION ===== */
-const srtop = ScrollReveal({
-    origin: 'top',
-    distance: '80px',
-    duration: 1000,
-    reset: true
-});
-
-/* SCROLL EXPERIENCE */
-srtop.reveal('.experience .timeline',{delay: 400});
-srtop.reveal('.experience .timeline .container',{interval: 400}); 
-
-
 // Start of Tawk.to Live Chat
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
