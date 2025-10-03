@@ -230,6 +230,7 @@ header .navbar ul li a:hover{
   font-weight: 600;
   color:#02094b;
   font-family: 'Font Awesome\ 5 Free';
+  transition: none;
 }
 .experience .left {
   left: 0;
@@ -270,6 +271,12 @@ header .navbar ul li a:hover{
   background-color: #f68c09;
   position: relative;
   border-radius: 6px;
+  transition: 0.3s ease;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+.experience .container:hover .content {
+  transform: scale(1.05);
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
 }
 .experience .content .tag{
   font-size: 1.3rem;
