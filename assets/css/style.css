@@ -790,65 +790,126 @@ header .navbar ul li a:hover {
   position: relative;
   overflow: hidden;
   height: 30rem;
+  cursor: pointer;
 }
 .work .box-container .box img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  transition: transform 0.5s ease;
 }
-.work .box-container .box .content {
-  height: 100%;
-  width: 100%;
+.work .box-container .box:hover img {
+  transform: scale(1.1);
+}
+/* Titre permanent en bas de la carte */
+.work .box-container .box .project-title-overlay {
   position: absolute;
-  top: 85%;
+  bottom: 0;
   left: 0;
-  background: rgba(255, 255, 255, 0.9);
-  display: flex;
-  flex-direction: column;
-}
-.work .box-container .box .content .tag {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 4.5rem;
   width: 100%;
-  padding-left: 1rem;
-  background: #ffd900;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.7));
+  padding: 1rem 0.8rem;
+  z-index: 1;
 }
-.work .box-container .box .content .tag h3 {
-  font-size: 2rem;
+.work .box-container .box .project-title-overlay h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffd900;
+  text-align: center;
+  margin: 0;
+  text-transform: none;
+  line-height: 1.3;
 }
-.work .box-container .box:hover .content {
-  top: 25%;
-}
-.work .desc {
-  margin: 2rem;
+/* Overlay au hover */
+.work .box-container .box .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  padding: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+  overflow: hidden;
 }
-.work .desc p {
-  font-size: 1.5rem;
+.work .box-container .box:hover .content {
+  opacity: 1;
 }
-.work .desc .btns {
+.work .box-container .box .content .project-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #ffd900;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-transform: none;
+}
+.work .box-container .box .content .project-links {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 2rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.work .desc .btns .btn {
-  line-height: 0;
-  display: inline;
-  padding: 1.5rem 2rem;
-  border-radius: .5rem;
+.work .box-container .box .content .project-links .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
   font-size: 1.5rem;
-  color: #fff;
-  background: rgb(12, 12, 12);
-  margin-right: .5rem;
+  color: #ffd900;
+  background: rgba(255, 217, 0, 0.1);
+  border: 0.15rem solid #ffd900;
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
-.work .desc .btns .btn:hover {
-  background: #310ae0f5;
+.work .box-container .box .content .project-links .btn:hover {
+  background: #ffd900;
+  color: #000;
+  transform: translateY(-0.3rem) scale(1.15);
+  box-shadow: 0 0.5rem 1rem rgba(255, 217, 0, 0.5);
+}
+.work .box-container .box .content .project-links .btn i {
+  font-size: 1.6rem;
+  margin: 0;
+}
+.work .box-container .box .content .project-desc {
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1.8;
+  padding: 0 0.5rem;
+  overflow-y: auto;
+  max-height: 60%;
+}
+.work .box-container .box .content .project-desc::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.work .box-container .box .content .project-desc::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+}
+.work .box-container .box .content .project-desc::-webkit-scrollbar-thumb {
+  background: #ffd900;
+  border-radius: 1rem;
+}
+.work .box-container .box .content .project-desc::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.work .box-container .box .content .project-desc::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+}
+.work .box-container .box .content .project-desc::-webkit-scrollbar-thumb {
+  background: #ffd900;
+  border-radius: 1rem;
 }
 .work .viewall {
   display: flex;
@@ -1328,6 +1389,63 @@ form .button-area {
   }
   section {
     padding: 2rem;
+  }
+  
+  /* Project cards responsive */
+  .work .box-container .box .content .project-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .work .box-container .box .content {
+    padding: 0.8rem 1rem 0.4rem 1rem;
+  }
+  
+  .work .box-container .box .project-title-overlay {
+    padding: 0.8rem 0.6rem;
+  }
+  
+  .work .box-container .box .project-title-overlay h3 {
+    font-size: 1.3rem;
+  }
+  
+  .work .box-container .box .content .project-links {
+    gap: 0.8rem;
+  }
+  
+  .work .box-container .box .content .project-links .btn {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.2rem;
+  }
+  
+  .work .box-container .box .content .project-links .btn i {
+    font-size: 1.4rem;
+  }
+  
+  .work .box-container .box .content .project-desc {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Project cards for tablets */
+  .work .box-container .box .content .project-title {
+    font-size: 1.7rem;
+  }
+  
+  .work .box-container .box .project-title-overlay h3 {
+    font-size: 1.5rem;
+  }
+  
+  .work .box-container .box .content .project-links .btn {
+    width: 3.2rem;
+    height: 3.2rem;
+    font-size: 1.4rem;
+  }
+  
+  .work .box-container .box .content .project-links .btn i {
+    font-size: 1.5rem;
   }
 }
 /* common media queries ends*/

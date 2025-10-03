@@ -124,21 +124,34 @@ async function showProjects(projects) {
     selectedProjects = selectedProjects.slice(0, maxProjects);
     
     selectedProjects.forEach(project => {
+        // Créer la liste des liens disponibles
+        let linksHTML = '';
+        if (project.links.report) {
+            linksHTML += `<a href="projects/reports/${project.links.report}.pdf" class="btn" target="_blank" title="Report">
+                <i class="fas fa-file-pdf"></i>
+            </a>`;
+        }
+        if (project.links.poster) {
+            linksHTML += `<a href="projects/posters/${project.links.poster}.pdf" class="btn" target="_blank" title="Poster">
+                <i class="fas fa-image"></i>
+            </a>`;
+        }
+        if (project.links.code) {
+            linksHTML += `<a href="${project.links.code}" class="btn" target="_blank" title="Code">
+                <i class="fas fa-code"></i>
+            </a>`;
+        }
+        
         projectHTML += `
         <div class="box tilt">
-            <img draggable="false" src="projects/images/${project.image}.png" alt="project" />
+            <img draggable="false" src="projects/images/${project.image}.png" alt="${project.name}" />
+            <div class="project-title-overlay">
+                <h3>${project.name}</h3>
+            </div>
             <div class="content">
-                <div class="tag">
-                    <h3>${project.name}</h3>
-                </div>
-                <div class="desc">
-                    <p>${project.desc}</p>
-                    <div class="btns">
-                        ${project.links.report ? `<a href="projects/reports/${project.links.report}.pdf" class="btn" target="_blank"><i class="fas fa-file-pdf"></i> Report</a>` : ""}
-                        ${project.links.poster ? `<a href="projects/posters/${project.links.poster}.pdf" class="btn" target="_blank"><i class="fas fa-eye"></i> Poster</a>` : ""}
-                        ${project.links.code ? `<a href="${project.links.code}" class="btn" target="_blank"><i class="fas fa-code"></i> Code</a>` : ""}
-                    </div>
-                </div>
+                <h3 class="project-title">${project.name}</h3>
+                ${linksHTML ? `<div class="project-links">${linksHTML}</div>` : ''}
+                <p class="project-desc">${project.desc}</p>
             </div>
         </div>`;
     });
