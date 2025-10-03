@@ -81,19 +81,19 @@ async function showAllProjects(filter = 'all') {
             </a>`;
         }
         if (project.links.code) {
-            linksHTML += `<a href="${project.links.code}" class="btn" target="_blank" title="Code">
+            linksHTML += `<a href="/projects/codes/${project.links.code}" class="btn" target="_blank" title="Code">
                 <i class="fas fa-code"></i>
             </a>`;
         }
         
         projectHTML += `
-        <div class="box tilt">
+        <div class="box">
             <img draggable="false" src="/projects/images/${project.image}.png" alt="${project.name}" />
             <div class="project-title-overlay">
                 <h3>${project.name}</h3>
             </div>
             <div class="content">
-                <h3 class="project-title">${project.name}</h3>
+                <div class="project-title">${project.name}</div>
                 ${linksHTML ? `<div class="project-links">${linksHTML}</div>` : ''}
                 <p class="project-desc">${project.desc}</p>
             </div>
@@ -106,11 +106,6 @@ async function showAllProjects(filter = 'all') {
     }
     
     projectsContainer.innerHTML = projectHTML;
-    
-    // Initialiser l'effet tilt
-    VanillaTilt.init(document.querySelectorAll(".tilt"), {
-        max: 15,
-    });
     
     // Animation scroll reveal
     const srtop = ScrollReveal({
