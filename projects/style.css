@@ -233,6 +233,7 @@ header .navbar ul li a:hover {
 .work {
   /* background: #010124; */
   background: linear-gradient(to bottom, #000031, #00002c);
+  padding-top: 6.5rem;
 }
 .work h2 {
   color: #fff;
@@ -393,6 +394,11 @@ header .navbar ul li a:hover {
 }
 
 .work .box-container .box:hover .content {
+  opacity: 1;
+}
+
+/* Support mobile/tactile - afficher l'overlay au clic */
+.work .box-container .box.active .content {
   opacity: 1;
 }
 

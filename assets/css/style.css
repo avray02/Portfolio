@@ -841,6 +841,10 @@ header .navbar ul li a:hover {
 .work .box-container .box:hover .content {
   opacity: 1;
 }
+/* Support mobile/tactile - afficher l'overlay au clic */
+.work .box-container .box.active .content {
+  opacity: 1;
+}
 .work .box-container .box .content .project-title {
   font-size: 1.9rem;
   font-weight: 700;

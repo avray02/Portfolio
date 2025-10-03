@@ -174,7 +174,42 @@ async function showProjects(projects) {
 
     /* SCROLL PROJECTS */
     srtop.reveal('.work .box', { interval: 200 });
+    
+    // Ajouter le support tactile pour mobile
+    addMobileSupport();
 
+}
+
+// Fonction pour gérer le clic/tap sur mobile
+function addMobileSupport() {
+    const boxes = document.querySelectorAll('.work .box');
+    
+    boxes.forEach(box => {
+        box.addEventListener('click', function(e) {
+            // Si on clique sur un lien (bouton), ne pas interférer
+            if (e.target.closest('.btn')) {
+                return;
+            }
+            
+            // Toggle la classe active
+            const isActive = this.classList.contains('active');
+            
+            // Fermer tous les autres projets
+            boxes.forEach(b => b.classList.remove('active'));
+            
+            // Toggle celui-ci
+            if (!isActive) {
+                this.classList.add('active');
+            }
+        });
+    });
+    
+    // Fermer l'overlay si on clique en dehors
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.work .box')) {
+            boxes.forEach(b => b.classList.remove('active'));
+        }
+    });
 }
 
 fetchData().then(data => {
