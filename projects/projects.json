@@ -13,7 +13,7 @@
    {
     "name": "Defect Detection | Rolex SA",
     "desc": "Using deep learning methods to detect defects on watch components in the context of industrial quality control.",
-    "image": "rolex_landweller",
+    "image": "defaut",
     "category": "vision",
     "type": "MA6 master project",
     "links": {
