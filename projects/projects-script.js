@@ -81,7 +81,7 @@ async function showAllProjects(filter = 'all') {
             </a>`;
         }
         if (project.links.code) {
-            linksHTML += `<a href="./codes/${project.links.code}" class="btn" target="_blank" title="Code">
+            linksHTML += `<a href=".${project.links.code}" class="btn" target="_blank" title="Code">
                 <i class="fas fa-code"></i>
             </a>`;
         }
