@@ -11,8 +11,8 @@
     }
   },
    {
-    "name": "Defect Detection | Rolex SA",
-    "desc": "Using deep learning methods to detect defects on watch components in the context of industrial quality control.",
+    "name": "Anomaly Detection",
+    "desc": "Using deep learning methods to detect anomalies on industrial components in the context of industrial quality control.",
     "image": "defaut",
     "category": "vision",
     "type": "MA6 master project",
