@@ -1,8 +1,8 @@
 {
   "featured": {
     "projects": [
+      "Anomaly Detection",
       "Traction Control | EPFL RT",
-      "Defect Detection | Rolex SA",
       "Microgrid control",
       "Trajectory prediction",
       "Legged robots control"
