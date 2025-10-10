@@ -407,6 +407,15 @@ header .navbar ul li a:hover{
   padding-right: 1rem;
   color: #ffae00;
 }
+.footer .box-container .box p a {
+  color: inherit;
+  text-decoration: none;
+  text-transform: none;
+  display: inline;
+}
+.footer .box-container .box p a:hover {
+  text-decoration: underline;
+}
 .footer .box-container .box a{
   font-size: 1.5rem;
   color: rgb(238, 238, 238);
