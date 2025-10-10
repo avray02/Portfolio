@@ -7,7 +7,7 @@ const urlsToCache = [
   '/assets/js/script-new.js',
   '/assets/js/particles.min.js',
   '/assets/js/app.js',
-  '/skills.json',
+  '/skills/skills.json',
   '/projects/projects.json',
   '/assets/images/logo/white.png',
   '/assets/images/logo/black.png',

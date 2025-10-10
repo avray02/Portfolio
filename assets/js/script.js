@@ -82,7 +82,7 @@ var typed = new Typed(".typing-text", {
 async function fetchData(type = "skills") {
     let response
     if (type === "skills") {
-        response = await fetch("skills.json")
+        response = await fetch("skills/skills.json")
     } else if (type === "config") {
         response = await fetch("config.json")
     } else {
