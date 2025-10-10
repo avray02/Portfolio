@@ -1,51 +1,41 @@
-/* Personal Page Styles */
+﻿/* Personal Page Styles */
 
-/* Personal Hero Section */
-.personal-hero {
-    min-height: 60vh;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem 9%;
-    position: relative;
-    overflow: hidden;
+/* Scroll animations */
+.pillar-box,
+.impact-box,
+.env-card,
+.value-card,
+.photo-item,
+.timeline-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.personal-hero::before {
-    content: '';
+/* Vanta.js background container */
+#vanta-bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../images/bitmoji/hero.webp') center/cover no-repeat;
-    opacity: 0.1;
     z-index: 0;
 }
 
-.personal-hero .content {
+/* Hero Section - Override for personal page */
+.home .content h2 {
+    font-size: 5rem;
+}
+
+.home .content p {
+    font-size: 2rem;
+}
+
+/* Ensure content stays above Vanta background */
+.home .content,
+.home .image {
     position: relative;
     z-index: 1;
-    text-align: center;
-    color: #fff;
-}
-
-.personal-hero .content h1 {
-    font-size: 6rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.personal-hero .content h1 span {
-    color: #ffae00;
-}
-
-.personal-hero .content .tagline {
-    font-size: 2.5rem;
-    font-weight: 300;
-    opacity: 0.9;
 }
 
 /* Passions Section */
@@ -229,6 +219,622 @@
     box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
 }
 
+/* ========== NEW SECTIONS ========== */
+
+/* Life Balance Section - CLAIRE */
+.life-balance {
+    padding: 8rem 9%;
+    background: #f7f7f7;
+}
+
+.life-balance .heading {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    color: #0e2431;
+}
+
+.life-balance .heading span {
+    color: #7303a7;
+}
+
+.balance-intro {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 5rem;
+}
+
+.balance-intro p {
+    font-size: 1.8rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.pillars-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.pillar-box {
+    background: #fff;
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid rgba(115, 3, 167, 0.2);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pillar-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(115, 3, 167, 0.3);
+    border-color: #7303a7;
+}
+
+.pillar-icon {
+    font-size: 5rem;
+    color: #fc8c05;
+    margin-bottom: 2rem;
+}
+
+.pillar-box h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #0e2431;
+}
+
+.pillar-box p {
+    font-size: 1.5rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.pillar-highlight {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.pillar-highlight span {
+    background: linear-gradient(135deg, #7303a7, #420177);
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 1.3rem;
+}
+
+/* Athletic Journey Section - SOMBRE */
+.athletic-journey {
+    padding: 8rem 9%;
+    background: #0f0f1e;
+}
+
+.athletic-journey .heading {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    color: #e4e6eb;
+    text-shadow: 0 0 20px rgba(252, 140, 5, 0.4);
+}
+
+.athletic-journey .heading span {
+    background: linear-gradient(135deg, #fc8c05, #ffe600);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.journey-intro {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.journey-intro p {
+    font-size: 2.5rem;
+    font-style: italic;
+    color: #fc8c05;
+    font-weight: 300;
+}
+
+.athletic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 5rem;
+}
+
+.athletic-image {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(252, 140, 5, 0.3);
+}
+
+.athletic-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.athletic-image:hover img {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 15, 30, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.image-overlay i {
+    font-size: 6rem;
+    color: #fc8c05;
+}
+
+.athletic-image:hover .image-overlay {
+    opacity: 1;
+}
+
+.results-timeline {
+    background: #1a1a2e;
+    padding: 3rem;
+    border-radius: 15px;
+    border-left: 5px solid #fc8c05;
+}
+
+.results-timeline h3 {
+    font-size: 2.5rem;
+    color: #fc8c05;
+    margin-bottom: 3rem;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(252, 140, 5, 0.2);
+}
+
+.timeline-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.timeline-year {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fc8c05;
+    min-width: 80px;
+}
+
+.timeline-content h4 {
+    font-size: 1.8rem;
+    color: #e4e6eb;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+    font-size: 1.4rem;
+    color: #b8bcc6;
+    line-height: 1.6;
+}
+
+.athletic-photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.photo-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.photo-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.photo-item:hover img {
+    transform: scale(1.1);
+}
+
+.photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(15, 15, 30, 0.9), transparent);
+    color: #fff;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+/* Community Impact Section - CLAIRE */
+.community-impact {
+    padding: 8rem 9%;
+    background: #f7f7f7;
+}
+
+.community-impact .heading {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    font-weight: 700;
+    color: #0e2431;
+}
+
+.community-impact .heading span {
+    color: #7303a7;
+}
+
+.impact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 4rem;
+}
+
+.impact-box {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.impact-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(115, 3, 167, 0.2);
+}
+
+.impact-header {
+    padding: 2rem;
+    background: linear-gradient(135deg, #7303a7, #420177);
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.impact-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.impact-header h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.impact-tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 1.3rem;
+}
+
+.impact-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.impact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.impact-box:hover .impact-image img {
+    transform: scale(1.1);
+}
+
+.impact-content {
+    padding: 2rem;
+}
+
+.impact-content p {
+    font-size: 1.5rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.impact-stats {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item i {
+    font-size: 2.5rem;
+    color: #fc8c05;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item span {
+    display: block;
+    font-size: 1.4rem;
+    color: #0e2431;
+    font-weight: 600;
+}
+
+.impact-values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.impact-values span {
+    background: #f0f0f0;
+    padding: 0.7rem 1.5rem;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    color: #0e2431;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.impact-values span i {
+    color: #fc8c05;
+}
+
+/* Environmental Commitment Section - SOMBRE */
+.environmental-commitment {
+    padding: 8rem 9%;
+    background: #0f0f1e;
+}
+
+.environmental-commitment .heading {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    font-weight: 700;
+    color: #e4e6eb;
+    text-shadow: 0 0 20px rgba(252, 140, 5, 0.4);
+}
+
+.environmental-commitment .heading span {
+    background: linear-gradient(135deg, #fc8c05, #ffe600);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.environment-intro {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    margin-bottom: 5rem;
+    align-items: center;
+}
+
+.intro-text h3 {
+    font-size: 2.5rem;
+    color: #fc8c05;
+    margin-bottom: 1.5rem;
+}
+
+.intro-text p {
+    font-size: 1.6rem;
+    color: #b8bcc6;
+    line-height: 1.8;
+}
+
+.intro-image {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(252, 140, 5, 0.3);
+}
+
+.intro-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.environment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 5rem;
+}
+
+.env-card {
+    background: #1a1a2e;
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid rgba(252, 140, 5, 0.2);
+    transition: all 0.3s ease;
+}
+
+.env-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(252, 140, 5, 0.3);
+    border-color: #fc8c05;
+}
+
+.env-icon {
+    font-size: 4rem;
+    color: #fc8c05;
+    margin-bottom: 1.5rem;
+}
+
+.env-card h4 {
+    font-size: 2rem;
+    color: #e4e6eb;
+    margin-bottom: 1rem;
+}
+
+.env-card p {
+    font-size: 1.4rem;
+    color: #b8bcc6;
+    line-height: 1.6;
+}
+
+.environment-quote {
+    background: #1a1a2e;
+    padding: 4rem;
+    border-radius: 15px;
+    text-align: center;
+    border-left: 5px solid #fc8c05;
+    box-shadow: 0 10px 30px rgba(252, 140, 5, 0.3);
+}
+
+.environment-quote i {
+    font-size: 3rem;
+    color: #fc8c05;
+    opacity: 0.5;
+    margin-bottom: 1rem;
+}
+
+.environment-quote p {
+    font-size: 2.2rem;
+    font-style: italic;
+    color: #e4e6eb;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.quote-author {
+    font-size: 1.6rem;
+    color: #fc8c05;
+}
+
+/* Core Values Section - CLAIRE */
+.core-values {
+    padding: 8rem 9%;
+    background: #f7f7f7;
+}
+
+.core-values .heading {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    color: #0e2431;
+}
+
+.core-values .heading span {
+    color: #7303a7;
+}
+
+.values-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 5rem;
+}
+
+.values-intro p {
+    font-size: 1.8rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.values-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+}
+
+.value-card {
+    background: #fff;
+    padding: 3rem;
+    border-radius: 15px;
+    border: 2px solid rgba(115, 3, 167, 0.2);
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(115, 3, 167, 0.3);
+    border-color: #7303a7;
+}
+
+.value-number {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    font-size: 6rem;
+    font-weight: 700;
+    color: rgba(115, 3, 167, 0.1);
+}
+
+.value-icon {
+    font-size: 4rem;
+    color: #fc8c05;
+    margin-bottom: 1.5rem;
+}
+
+.value-card h3 {
+    font-size: 2.2rem;
+    color: #0e2431;
+    margin-bottom: 1.5rem;
+}
+
+.value-description p {
+    font-size: 1.5rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.value-example {
+    background: #f0f0f0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #fc8c05;
+}
+
+.example-tag {
+    display: inline-block;
+    background: #fc8c05;
+    color: #fff;
+    padding: 0.3rem 1rem;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.value-example p {
+    font-size: 1.4rem;
+    color: #0e2431;
+    font-style: italic;
+    margin: 0;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .personal-hero .content h1 {
@@ -251,6 +857,30 @@
     .passion-box {
         padding: 2rem 1.5rem;
     }
+
+    /* New sections responsive */
+    .pillars-container,
+    .impact-container,
+    .environment-grid,
+    .values-container {
+        grid-template-columns: 1fr;
+    }
+
+    .athletic-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .environment-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .journey-intro p {
+        font-size: 2rem;
+    }
+
+    .athletic-photos {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 450px) {
@@ -268,5 +898,21 @@
 
     .passion-box p {
         font-size: 1.4rem;
+    }
+
+    .life-balance .heading,
+    .athletic-journey .heading,
+    .community-impact .heading,
+    .environmental-commitment .heading,
+    .core-values .heading {
+        font-size: 2.5rem;
+    }
+
+    .journey-intro p {
+        font-size: 1.6rem;
+    }
+
+    .value-number {
+        font-size: 4rem;
     }
 }

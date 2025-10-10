@@ -28,6 +28,19 @@ $(document).ready(function () {
                 $('.navbar').find(`[href="#${id}"]`).addClass('active');
             }
         });
+
+        // Animate elements on scroll
+        $('.pillar-box, .impact-box, .env-card, .value-card, .photo-item, .timeline-item').each(function() {
+            let elementTop = $(this).offset().top;
+            let elementBottom = elementTop + $(this).outerHeight();
+            let viewportTop = $(window).scrollTop();
+            let viewportBottom = viewportTop + $(window).height();
+
+            if (elementBottom > viewportTop && elementTop < viewportBottom) {
+                $(this).css('opacity', '1');
+                $(this).css('transform', 'translateY(0)');
+            }
+        });
     });
 
     // Smooth scrolling
@@ -40,6 +53,40 @@ $(document).ready(function () {
             }, 500, 'linear')
         }
     });
+});
+
+// Vanta.js Waves Effect
+if (typeof VANTA !== 'undefined') {
+    VANTA.WAVES({
+        el: "#vanta-bg",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x5a7a9a,        // Gris-bleu clair et doux
+        backgroundColor: 0x2a3545, // Fond gris plus lumineux
+        shininess: 60.00,       // Encore plus brillant
+        waveHeight: 18.00,
+        waveSpeed: 0.75,
+        zoom: 0.65
+    });
+}
+
+// Typed.js effect for personal page
+var typed = new Typed(".typing-text", {
+    strings: ["Endlessly Curious", "Passionate", "Collaborative", "Perseverant"],
+    loop: true,
+    typeSpeed: 50,
+    backSpeed: 25,
+    backDelay: 500,
+});
+
+// Vanilla Tilt effect
+VanillaTilt.init(document.querySelectorAll(".tilt"), {
+    max: 15,
 });
 
 // Visibility change handler
