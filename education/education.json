@@ -1,0 +1,23 @@
+[
+  {
+    "degree": "Bachelor in Microengineering",
+    "institution": "Ecole Polytechnique Fédérale de Lausanne (EPFL)",
+    "period": "2019-2022",
+    "status": "Completed",
+    "image": "education/images/epfl.jpg"
+  },
+  {
+    "degree": "3rd year Exchange in Electrical Engineering",
+    "institution": "Polytechnique Montréal",
+    "period": "2021-2022",
+    "status": "Completed",
+    "image": "education/images/polymtl.jpg"
+  },
+  {
+    "degree": "Master of Science | Robotics",
+    "institution": "Ecole Polytechnique Fédérale de Lausanne (EPFL)",
+    "period": "2022-2025",
+    "status": "Completed",
+    "image": "education/images/epfl.jpg"
+  }
+]

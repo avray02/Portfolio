@@ -85,6 +85,8 @@ async function fetchData(type = "skills") {
         response = await fetch("skills/skills.json")
     } else if (type === "config") {
         response = await fetch("config.json")
+    } else if (type === "education") {
+        response = await fetch("education/education.json")
     } else {
         response = await fetch("./projects/projects.json")
     }
@@ -105,6 +107,27 @@ function showSkills(skills) {
             </div>`
     });
     skillsContainer.innerHTML = skillHTML;
+}
+
+function showEducation(educationData) {
+    let educationContainer = document.querySelector("#education .box-container");
+    let educationHTML = "";
+    
+    educationData.forEach(edu => {
+        educationHTML += `
+        <div class="box">
+            <div class="image">
+                <img draggable="false" src="./${edu.image}" alt="${edu.institution}">
+            </div>
+            <div class="content">
+                <h3>${edu.degree}</h3>
+                <p>${edu.institution}</p>
+                <h4>${edu.period} | ${edu.status}</h4>
+            </div>
+        </div>`;
+    });
+    
+    educationContainer.innerHTML = educationHTML;
 }
 
 async function showProjects(projects) {
@@ -203,6 +226,10 @@ function addMobileSupport() {
 
 fetchData().then(data => {
     showSkills(data);
+});
+
+fetchData("education").then(data => {
+    showEducation(data);
 });
 
 fetchData("projects").then(async data => {

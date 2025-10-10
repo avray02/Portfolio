@@ -69,32 +69,6 @@ html::-webkit-scrollbar-thumb {
   filter: brightness(1.1);
 }
 
-a[title*="personal"] {
-  display: inline-block;
-  position: relative;
-}
-
-a[title*="personal"]::after {
-  content: '👤 Click to discover more';
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  font-size: 1.2rem;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-a[title*="personal"]:hover::after {
-  opacity: 1;
-}
-
 /* navbar starts */
 header {
   position: fixed;
