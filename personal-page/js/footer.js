@@ -9,8 +9,7 @@ class PersonalPageFooter {
                 { text: "about", href: "#about", icon: "fas fa-chevron-circle-right" },
                 { text: "athletic", href: "#athletic", icon: "fas fa-chevron-circle-right" },
                 { text: "community", href: "#community", icon: "fas fa-chevron-circle-right" },
-                { text: "environment", href: "#environment", icon: "fas fa-chevron-circle-right" },
-                { text: "values", href: "#values", icon: "fas fa-chevron-circle-right" }
+                { text: "discovery", href: "#discovery", icon: "fas fa-chevron-circle-right" }
             ],
             contact: {
                 phone: "+41 78 305 42 17",

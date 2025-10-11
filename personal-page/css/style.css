@@ -1,10 +1,9 @@
 ﻿/* Personal Page Styles */
 
 /* Scroll animations */
-.pillar-box,
+.pillar-icon-item,
 .impact-box,
-.env-card,
-.value-card,
+.discovery-card,
 .photo-item,
 .timeline-item {
     opacity: 0;
@@ -17,9 +16,20 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
     z-index: 0;
+    overflow: hidden;
+}
+
+/* Ensure the canvas inside vanta-bg fills the container */
+#vanta-bg canvas {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
 }
 
 /* Hero Section - Override for personal page */
@@ -36,6 +46,16 @@
 .home .image {
     position: relative;
     z-index: 1;
+}
+
+/* Make hero image clickable - keep only 3D tilt effect */
+.home .image a {
+    display: block;
+    cursor: pointer;
+}
+
+.home .image a:hover img {
+    filter: brightness(1.05);
 }
 
 /* Passions Section */
@@ -221,12 +241,69 @@
 
 /* ========== NEW SECTIONS ========== */
 
-/* Life Balance Section - CLAIRE */
+/* Life Balance Section (About) - Style from main page */
 .life-balance {
-    padding: 8rem 9%;
-    background: #f7f7f7;
+    background: rgb(255, 255, 255);
 }
 
+.life-balance .row {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 4rem;
+}
+
+.life-balance .row .image {
+    text-align: center;
+    flex: 1 1 35rem;
+}
+
+.life-balance .row .image img {
+    margin: 4rem;
+    max-width: min(80%, 30rem);
+    width: 100%;
+    height: auto;
+    border-radius: 5%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+    mix-blend-mode: luminosity;
+    transition: 0.3s;
+    cursor: pointer;
+    object-fit: cover;
+    aspect-ratio: 3 / 4;
+}
+
+.life-balance .row .image img:hover {
+    mix-blend-mode: normal;
+}
+
+.life-balance .row .content {
+    flex: 1 1 45rem;
+    padding: 3rem;
+}
+
+.life-balance .row .content h3 {
+    color: rgb(27, 27, 27);
+    font-size: 2.5rem;
+}
+
+.life-balance .row .content .tag {
+    font-size: 1.4rem;
+    color: #7303a7;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.life-balance .row .content p {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    font-family: "Nunito";
+    font-weight: 600;
+    text-transform: none;
+    color: #333;
+}
+
+/* Heading styles */
 .life-balance .heading {
     font-size: 3.5rem;
     text-align: center;
@@ -239,72 +316,82 @@
     color: #7303a7;
 }
 
-.balance-intro {
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto 5rem;
-}
-
-.balance-intro p {
-    font-size: 1.8rem;
-    color: #555;
-    line-height: 1.8;
-}
-
-.pillars-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
-}
-
-.pillar-box {
-    background: #fff;
-    padding: 3rem 2rem;
-    border-radius: 15px;
-    text-align: center;
-    border: 2px solid rgba(115, 3, 167, 0.2);
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.pillar-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(115, 3, 167, 0.3);
-    border-color: #7303a7;
-}
-
-.pillar-icon {
-    font-size: 5rem;
-    color: #fc8c05;
-    margin-bottom: 2rem;
-}
-
-.pillar-box h3 {
-    font-size: 2.2rem;
-    margin-bottom: 1.5rem;
-    color: #0e2431;
-}
-
-.pillar-box p {
-    font-size: 1.5rem;
-    color: #555;
-    line-height: 1.8;
-    margin-bottom: 2rem;
-}
-
-.pillar-highlight {
+/* Pillar icons - Modern circular design */
+.pillars-icons {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 4rem;
     flex-wrap: wrap;
 }
 
-.pillar-highlight span {
+.pillar-icon-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.pillar-icon-item:hover {
+    transform: translateY(-15px) scale(1.1);
+}
+
+.icon-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #fc8c05, #ffe600);
+    box-shadow: 0 10px 30px rgba(252, 140, 5, 0.3);
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.icon-circle::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
     background: linear-gradient(135deg, #7303a7, #420177);
+    z-index: -1;
+    transform: scale(0);
+    transition: transform 0.4s ease;
+}
+
+.pillar-icon-item:hover .icon-circle::before {
+    transform: scale(1.15);
+}
+
+.pillar-icon-item:hover .icon-circle {
+    box-shadow: 0 15px 50px rgba(115, 3, 167, 0.5);
+}
+
+.icon-circle i {
+    font-size: 5rem;
     color: #fff;
-    padding: 0.5rem 1.5rem;
-    border-radius: 20px;
-    font-size: 1.3rem;
+    transition: all 0.5s ease;
+    z-index: 2;
+    position: relative;
+}
+
+.pillar-label {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #0e2431;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.pillar-icon-item:hover .pillar-label {
+    color: #7303a7;
+    transform: scale(1.1);
 }
 
 /* Athletic Journey Section - SOMBRE */
@@ -607,136 +694,13 @@
     color: #fc8c05;
 }
 
-/* Environmental Commitment Section - SOMBRE */
-.environmental-commitment {
-    padding: 8rem 9%;
-    background: #0f0f1e;
-}
-
-.environmental-commitment .heading {
-    font-size: 3.5rem;
-    text-align: center;
-    margin-bottom: 5rem;
-    font-weight: 700;
-    color: #e4e6eb;
-    text-shadow: 0 0 20px rgba(252, 140, 5, 0.4);
-}
-
-.environmental-commitment .heading span {
-    background: linear-gradient(135deg, #fc8c05, #ffe600);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.environment-intro {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 4rem;
-    margin-bottom: 5rem;
-    align-items: center;
-}
-
-.intro-text h3 {
-    font-size: 2.5rem;
-    color: #fc8c05;
-    margin-bottom: 1.5rem;
-}
-
-.intro-text p {
-    font-size: 1.6rem;
-    color: #b8bcc6;
-    line-height: 1.8;
-}
-
-.intro-image {
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(252, 140, 5, 0.3);
-}
-
-.intro-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.environment-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 3rem;
-    margin-bottom: 5rem;
-}
-
-.env-card {
-    background: #1a1a2e;
-    padding: 3rem 2rem;
-    border-radius: 15px;
-    text-align: center;
-    border: 2px solid rgba(252, 140, 5, 0.2);
-    transition: all 0.3s ease;
-}
-
-.env-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(252, 140, 5, 0.3);
-    border-color: #fc8c05;
-}
-
-.env-icon {
-    font-size: 4rem;
-    color: #fc8c05;
-    margin-bottom: 1.5rem;
-}
-
-.env-card h4 {
-    font-size: 2rem;
-    color: #e4e6eb;
-    margin-bottom: 1rem;
-}
-
-.env-card p {
-    font-size: 1.4rem;
-    color: #b8bcc6;
-    line-height: 1.6;
-}
-
-.environment-quote {
-    background: #1a1a2e;
-    padding: 4rem;
-    border-radius: 15px;
-    text-align: center;
-    border-left: 5px solid #fc8c05;
-    box-shadow: 0 10px 30px rgba(252, 140, 5, 0.3);
-}
-
-.environment-quote i {
-    font-size: 3rem;
-    color: #fc8c05;
-    opacity: 0.5;
-    margin-bottom: 1rem;
-}
-
-.environment-quote p {
-    font-size: 2.2rem;
-    font-style: italic;
-    color: #e4e6eb;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-}
-
-.quote-author {
-    font-size: 1.6rem;
-    color: #fc8c05;
-}
-
-/* Core Values Section - CLAIRE */
-.core-values {
+/* Discovery & Learning Section - CLAIRE */
+.discovery-learning {
     padding: 8rem 9%;
     background: #f7f7f7;
 }
 
-.core-values .heading {
+.discovery-learning .heading {
     font-size: 3.5rem;
     text-align: center;
     margin-bottom: 3rem;
@@ -744,95 +708,119 @@
     color: #0e2431;
 }
 
-.core-values .heading span {
+.discovery-learning .heading span {
     color: #7303a7;
 }
 
-.values-intro {
+.discovery-intro {
     text-align: center;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto 5rem;
 }
 
-.values-intro p {
+.discovery-intro p {
     font-size: 1.8rem;
     color: #555;
     line-height: 1.8;
 }
 
-.values-container {
+.discovery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 4rem;
+    margin-bottom: 5rem;
 }
 
-.value-card {
+.discovery-card {
     background: #fff;
-    padding: 3rem;
+    padding: 3rem 2.5rem;
     border-radius: 15px;
     border: 2px solid rgba(115, 3, 167, 0.2);
-    position: relative;
     transition: all 0.3s ease;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-.value-card:hover {
+.discovery-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 40px rgba(115, 3, 167, 0.3);
     border-color: #7303a7;
 }
 
-.value-number {
-    position: absolute;
-    top: -15px;
-    right: 20px;
-    font-size: 6rem;
-    font-weight: 700;
-    color: rgba(115, 3, 167, 0.1);
-}
-
-.value-icon {
-    font-size: 4rem;
+.discovery-icon {
+    font-size: 4.5rem;
     color: #fc8c05;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
-.value-card h3 {
+.discovery-card h3 {
     font-size: 2.2rem;
     color: #0e2431;
     margin-bottom: 1.5rem;
+    text-align: center;
 }
 
-.value-description p {
+.discovery-card p {
     font-size: 1.5rem;
     color: #555;
     line-height: 1.8;
     margin-bottom: 2rem;
+    text-align: center;
 }
 
-.value-example {
-    background: #f0f0f0;
-    padding: 1.5rem;
-    border-radius: 10px;
-    border-left: 4px solid #fc8c05;
+.discovery-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
 }
 
-.example-tag {
-    display: inline-block;
-    background: #fc8c05;
-    color: #fff;
-    padding: 0.3rem 1rem;
-    border-radius: 15px;
-    font-size: 1.2rem;
-    margin-bottom: 0.8rem;
+.discovery-highlights span {
+    background: linear-gradient(135deg, rgba(252, 140, 5, 0.1), rgba(115, 3, 167, 0.1));
+    color: #7303a7;
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+    font-size: 1.3rem;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid rgba(115, 3, 167, 0.3);
 }
 
-.value-example p {
-    font-size: 1.4rem;
-    color: #0e2431;
+.discovery-highlights span i {
+    color: #fc8c05;
+}
+
+.discovery-quote {
+    background: #fff;
+    padding: 4rem;
+    border-radius: 15px;
+    text-align: center;
+    border-left: 5px solid #fc8c05;
+    box-shadow: 0 10px 30px rgba(115, 3, 167, 0.2);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.discovery-quote i {
+    font-size: 3rem;
+    color: #fc8c05;
+    opacity: 0.5;
+    margin-bottom: 1rem;
+}
+
+.discovery-quote p {
+    font-size: 2.2rem;
     font-style: italic;
-    margin: 0;
+    color: #0e2431;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.discovery-quote .quote-author {
+    font-size: 1.6rem;
+    color: #7303a7;
 }
 
 /* Responsive Design */
@@ -861,16 +849,11 @@
     /* New sections responsive */
     .pillars-container,
     .impact-container,
-    .environment-grid,
-    .values-container {
+    .discovery-grid {
         grid-template-columns: 1fr;
     }
 
     .athletic-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .environment-intro {
         grid-template-columns: 1fr;
     }
 
@@ -903,8 +886,7 @@
     .life-balance .heading,
     .athletic-journey .heading,
     .community-impact .heading,
-    .environmental-commitment .heading,
-    .core-values .heading {
+    .discovery-learning .heading {
         font-size: 2.5rem;
     }
 
@@ -912,7 +894,42 @@
         font-size: 1.6rem;
     }
 
-    .value-number {
+    /* About section responsive */
+    .life-balance .row .image {
+        margin-top: 2rem;
+    }
+
+    .life-balance .row .image img {
+        margin: 0 auto;
+        max-width: min(70%, 25rem);
+        width: 100%;
+        mix-blend-mode: normal;
+    }
+
+    .life-balance .row {
+        padding: 0.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .life-balance .row .content {
+        padding: 1rem;
+    }
+
+    /* Pillar icons responsive */
+    .pillars-icons {
+        gap: 3rem;
+    }
+
+    .icon-circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .icon-circle i {
         font-size: 4rem;
+    }
+
+    .pillar-label {
+        font-size: 1.4rem;
     }
 }

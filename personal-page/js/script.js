@@ -30,7 +30,7 @@ $(document).ready(function () {
         });
 
         // Animate elements on scroll
-        $('.pillar-box, .impact-box, .env-card, .value-card, .photo-item, .timeline-item').each(function() {
+        $('.pillar-icon-item, .impact-box, .discovery-card, .photo-item, .timeline-item').each(function() {
             let elementTop = $(this).offset().top;
             let elementBottom = elementTop + $(this).outerHeight();
             let viewportTop = $(window).scrollTop();
@@ -56,8 +56,9 @@ $(document).ready(function () {
 });
 
 // Vanta.js Waves Effect
+let vantaEffect;
 if (typeof VANTA !== 'undefined') {
-    VANTA.WAVES({
+    vantaEffect = VANTA.WAVES({
         el: "#vanta-bg",
         mouseControls: true,
         touchControls: true,
@@ -72,6 +73,13 @@ if (typeof VANTA !== 'undefined') {
         waveHeight: 18.00,
         waveSpeed: 0.75,
         zoom: 0.65
+    });
+
+    // Resize handler to ensure waves always fill the section
+    window.addEventListener('resize', function() {
+        if (vantaEffect) {
+            vantaEffect.resize();
+        }
     });
 }
 
