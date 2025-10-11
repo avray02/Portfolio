@@ -633,15 +633,17 @@
 }
 
 /* Community Impact Section - CLAIRE */
+/* Community Impact Section - Dual Vertical Timeline */
 .community-impact {
     padding: 8rem 9%;
-    background: #f7f7f7;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    position: relative;
 }
 
 .community-impact .heading {
     font-size: 3.5rem;
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     font-weight: 700;
     color: #0e2431;
 }
@@ -650,122 +652,243 @@
     color: #7303a7;
 }
 
-.impact-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 4rem;
+.community-timeline {
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.impact-box {
-    background: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.impact-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(115, 3, 167, 0.2);
-}
-
-.impact-header {
-    padding: 2rem;
-    background: linear-gradient(135deg, #7303a7, #420177);
-    color: #fff;
+.timeline-intro {
     text-align: center;
+    margin-bottom: 3rem;
+    padding: 0 10%;
+}
+
+.timeline-intro p {
+    font-size: 2rem;
+    font-style: italic;
+    color: #0e2431;
+    font-weight: 500;
+}
+
+/* Dual Timeline Container */
+.dual-timeline-container {
     position: relative;
-}
-
-.impact-icon {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-}
-
-.impact-header h3 {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-}
-
-.impact-tag {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 0.5rem 1.5rem;
-    border-radius: 20px;
-    font-size: 1.3rem;
-}
-
-.impact-image {
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-}
-
-.impact-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s;
-}
-
-.impact-box:hover .impact-image img {
-    transform: scale(1.1);
-}
-
-.impact-content {
-    padding: 2rem;
-}
-
-.impact-content p {
-    font-size: 1.5rem;
-    color: #555;
-    line-height: 1.8;
-    margin-bottom: 2rem;
-}
-
-.impact-stats {
-    display: flex;
-    justify-content: space-around;
+    min-height: 800px;
+    padding: 4rem 0;
     padding-top: 2rem;
-    border-top: 1px solid #eee;
 }
 
-.stat-item {
-    text-align: center;
+/* Timeline Axes (Left & Right) - Fixed positions */
+.timeline-axis {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    min-height: 500px;
 }
 
-.stat-item i {
-    font-size: 2.5rem;
-    color: #fc8c05;
-    margin-bottom: 0.5rem;
+.left-axis {
+    left: 0px;
 }
 
-.stat-item span {
-    display: block;
-    font-size: 1.4rem;
-    color: #0e2431;
-    font-weight: 600;
+.right-axis {
+    right: 0px;
 }
 
-.impact-values {
+/* Axis Headers */
+.axis-header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     gap: 1rem;
+    width: 150px;
 }
 
-.impact-values span {
-    background: #f0f0f0;
-    padding: 0.7rem 1.5rem;
-    border-radius: 20px;
-    font-size: 1.3rem;
-    color: #0e2431;
+.axis-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    justify-content: center;
+    font-size: 3.5rem;
+    color: #fff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    z-index: 10;
 }
 
-.impact-values span i {
-    color: #fc8c05;
+.axis-icon.sport {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.axis-icon.solidarity {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.axis-header h3 {
+    font-size: 1.6rem;
+    color: #0e2431;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.3;
+}
+
+/* Vertical Lines */
+.axis-line {
+    position: absolute;
+    left: 0;
+    top: 120px;
+    bottom: 0;
+    width: 4px;
+}
+
+.left-axis .axis-line {
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+}
+
+.right-axis .axis-line {
+    background: linear-gradient(180deg, #fa709a 0%, #fee140 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .left-axis {
+        left: 100px;
+    }
+    
+    .right-axis {
+        right: 100px;
+    }
+}
+
+@media (max-width: 968px) {
+    .dual-timeline-container {
+        padding: 4rem 0 2rem;
+        padding-top: 3rem;
+    }
+    
+    .timeline-intro {
+        margin-bottom: 2.5rem;
+    }
+    
+    .left-axis {
+        left: 60px;
+    }
+    
+    .right-axis {
+        right: 60px;
+    }
+    
+    .axis-header {
+        width: 100px;
+    }
+    
+    .axis-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2.8rem;
+    }
+    
+    .axis-header h3 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .community-impact {
+        padding: 6rem 5%;
+    }
+    
+    .timeline-intro {
+        margin-bottom: 2rem;
+        padding: 0 5%;
+    }
+    
+    .timeline-intro p {
+        font-size: 1.7rem;
+    }
+    
+    .dual-timeline-container {
+        padding: 4rem 0 2rem;
+        padding-top: 2.5rem;
+        min-height: 600px;
+    }
+    
+    .timeline-axis {
+        min-height: 400px;
+    }
+    
+    .left-axis {
+        left: 40px;
+    }
+    
+    .right-axis {
+        right: 40px;
+    }
+    
+    .axis-header {
+        width: 80px;
+    }
+    
+    .axis-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 2.4rem;
+    }
+    
+    .axis-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .axis-line {
+        top: 100px;
+    }
+}
+
+@media (max-width: 600px) {
+    .timeline-intro {
+        margin-bottom: 1.5rem;
+    }
+    
+    .dual-timeline-container {
+        padding-top: 2rem;
+        min-height: 500px;
+    }
+    
+    .timeline-axis {
+        min-height: 350px;
+    }
+    
+    .left-axis {
+        left: 25px;
+    }
+    
+    .right-axis {
+        right: 25px;
+    }
+    
+    .axis-header {
+        width: 70px;
+        gap: 0.5rem;
+    }
+    
+    .axis-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 2rem;
+    }
+    
+    .axis-header h3 {
+        font-size: 1.1rem;
+    }
+    
+    .axis-line {
+        top: 90px;
+    }
 }
 
 /* Discovery & Learning Section - CLAIRE */
