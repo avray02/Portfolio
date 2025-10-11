@@ -27,8 +27,8 @@ class PortfolioFooter {
             ],
             credit: {
                 text: "Designed with",
-                designer: "jigar sable",
-                designerUrl: "https://www.linkedin.com/in/jigar-sable"
+                designer: "Alexandre VRAY",
+                designerUrl: "https://www.linkedin.com/in/avray"
             }
         };
     }
@@ -76,7 +76,7 @@ class PortfolioFooter {
               </div>
           </div>
 
-          <h1 class="credit">${this.footerData.credit.text} <i class="fa fa-heart pulse"></i> by <a href="${this.footerData.credit.designerUrl}">${this.footerData.credit.designer}</a></h1>
+          <h1 class="credit">${this.footerData.credit.text} <i class="fa fa-heart pulse"></i> by <span style="color: #fc8c05;">${this.footerData.credit.designer}</span></h1>
 
         </section>
         <!-- footer section ends -->

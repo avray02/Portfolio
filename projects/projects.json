@@ -11,9 +11,9 @@
     }
   },
    {
-    "name": "Anomaly Detection",
-    "desc": "Using deep learning methods to detect anomalies on industrial components in the context of industrial quality control.",
-    "image": "defaut",
+    "name": "Quality control | Rolex SA",
+    "desc": "Using deep learning computer vision methods to control esthetics on industrial components in the context of industrial quality control.",
+    "image": "watchmaking2",
     "category": "vision",
     "type": "MA6 master project",
     "links": {
@@ -24,7 +24,7 @@
   {
     "name": "Realistic rendering optimisation | Rolex SA",
     "desc": "Using deep learning methods to enhance the rendering quality of watch components.",
-    "image": "rolex_daydate",
+    "image": "watchmaking",
     "category": "vision",
     "type": "MA5 internship",
     "links": {
