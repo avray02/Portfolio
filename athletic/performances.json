@@ -1,0 +1,127 @@
+{
+  "performances": [
+    {
+      "id": 1,
+      "sport": "cycling",
+      "year": 2024,
+      "name": "Tour de France Amateur",
+      "distance": "150km",
+      "time": "4h 30min",
+      "position": "25th",
+      "main_image": "./images/cycling-tour-2024-action.jpg",
+      "bib_image": "./images/cycling-tour-2024-bib.jpg",
+      "details": "Amazing experience cycling through French countryside"
+    },
+    {
+      "id": 2,
+      "sport": "running",
+      "year": 2024,
+      "name": "Marathon de Paris",
+      "distance": "42.2km",
+      "time": "3h 45min",
+      "position": "Personal Best",
+      "main_image": "./images/marathon-paris-2024-action.jpg",
+      "bib_image": "./images/marathon-paris-2024-bib.jpg",
+      "details": "First marathon under 4 hours!"
+    },
+    {
+      "id": 3,
+      "sport": "climbing",
+      "year": 2023,
+      "name": "Escalade Competition",
+      "level": "7a+",
+      "position": "Regional Champion",
+      "main_image": "./images/climbing-2023-action.jpg",
+      "bib_image": "./images/climbing-2023-bib.jpg",
+      "details": "Pushed my limits and reached new heights"
+    },
+    {
+      "id": 4,
+      "sport": "skiing",
+      "year": 2024,
+      "name": "Nordic Ski Race",
+      "distance": "30km",
+      "time": "1h 45min",
+      "position": "Top 10 Finish",
+      "main_image": "./images/ski-nordic-2024-action.jpg",
+      "bib_image": "./images/ski-nordic-2024-bib.jpg",
+      "details": "Perfect snow conditions"
+    },
+    {
+      "id": 5,
+      "sport": "triathlon",
+      "year": 2024,
+      "name": "Ironman 70.3",
+      "swim": "1.9km",
+      "bike": "90km",
+      "run": "21km",
+      "time": "5h 30min",
+      "main_image": "./images/ironman-2024-action.jpg",
+      "bib_image": "./images/ironman-2024-bib.jpg",
+      "details": "Half Ironman completion - incredible experience"
+    },
+    {
+      "id": 6,
+      "sport": "cycling",
+      "year": 2023,
+      "name": "Alpine Cycling Challenge",
+      "distance": "120km",
+      "elevation": "2800m D+",
+      "time": "5h 15min",
+      "position": "Top 50",
+      "main_image": "./images/cycling-alpine-2023-action.jpg",
+      "bib_image": "./images/cycling-alpine-2023-bib.jpg",
+      "details": "Challenging climbs through the Alps"
+    },
+    {
+      "id": 7,
+      "sport": "running",
+      "year": 2023,
+      "name": "Semi-Marathon de Genève",
+      "distance": "21.1km",
+      "time": "1h 42min",
+      "position": "15th in category",
+      "main_image": "./images/half-marathon-geneva-2023-action.jpg",
+      "bib_image": "./images/half-marathon-geneva-2023-bib.jpg",
+      "details": "Beautiful lakeside course"
+    },
+    {
+      "id": 8,
+      "sport": "triathlon",
+      "year": 2023,
+      "name": "Olympic Distance Triathlon",
+      "swim": "1.5km",
+      "bike": "40km",
+      "run": "10km",
+      "time": "2h 35min",
+      "position": "3rd place",
+      "main_image": "./images/triathlon-olympic-2023-action.jpg",
+      "bib_image": "./images/triathlon-olympic-2023-bib.jpg",
+      "details": "Podium finish! Great transition times"
+    },
+    {
+      "id": 9,
+      "sport": "running",
+      "year": 2022,
+      "name": "Trail Running Championship",
+      "distance": "25km",
+      "elevation": "1200m D+",
+      "time": "2h 30min",
+      "position": "Top 20",
+      "main_image": "./images/trail-2022-action.jpg",
+      "details": "First trail race experience - No bib for this one!"
+    },
+    {
+      "id": 10,
+      "sport": "skiing",
+      "year": 2023,
+      "name": "Cross-Country Ski Marathon",
+      "distance": "42km",
+      "time": "2h 55min",
+      "position": "12th place",
+      "main_image": "./images/ski-marathon-2023-action.jpg",
+      "bib_image": "./images/ski-marathon-2023-bib.jpg",
+      "details": "Longest ski race to date"
+    }
+  ]
+}

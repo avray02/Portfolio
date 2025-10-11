@@ -1,6 +1,20 @@
 // Personal page JavaScript
 
 $(document).ready(function () {
+    // Gérer le scroll vers l'ancre au chargement de la page
+    if (window.location.hash) {
+        // Attendre que tout soit chargé
+        setTimeout(function() {
+            const hash = window.location.hash;
+            const target = $(hash);
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top - 80
+                }, 800, 'swing');
+            }
+        }, 500); // Délai pour s'assurer que la page est complètement chargée
+    }
+
     $('#menu').click(function () {
         $(this).toggleClass('fa-times');
         $('.navbar').toggleClass('nav-toggle');

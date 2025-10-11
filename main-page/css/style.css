@@ -485,7 +485,7 @@ header .navbar ul li a:hover {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
   mix-blend-mode: luminosity;
   transition: 0.3s;
-  cursor: pointer;
+  cursor: default;
 }
 .about .row .image img:hover {
   mix-blend-mode: normal;

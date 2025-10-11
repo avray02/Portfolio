@@ -63,12 +63,13 @@
 <!-- personal hero section ends -->
 
 <!-- life balance section starts -->
-<section class="life-balance" id="about">
+<section class="about" id="about">
     <h2 class="heading"><i class="fas fa-user"></i> About <span>Me</span></h2>
     
     <div class="row">
         <div class="image">
             <img draggable="false" class="tilt" src="./images/cyclist2.jpg" alt="Alexandre - Personal Life">
+            <!-- <img draggable="false" class="tilt" src="./images/cyclist2.jpg" alt="Alexandre - Personal Life"> -->
         </div>
         
         <div class="content">
@@ -113,63 +114,102 @@
             <p>"Every race is a lesson in perseverance. Every finish line is a new beginning."</p>
         </div>
 
-        <div class="athletic-grid">
-            <div class="athletic-image">
-                <img src="./images/hero.png" alt="Athletic Achievement">
-                <div class="image-overlay">
-                    <i class="fas fa-running"></i>
+        <!-- Two Column Layout -->
+        <div class="athletic-grid-compact">
+            <!-- Left Column: Top Performances Table -->
+            <div class="performances-table-container">
+                <h3><i class="fas fa-trophy"></i> Top Performances</h3>
+                <div class="performances-table">
+                    <div class="table-row">
+                        <div class="sport-badge cycling">
+                            <i class="fas fa-bicycle"></i>
+                        </div>
+                        <div class="perf-info">
+                            <h4>Tour de France Amateur</h4>
+                            <p>150km • 4h 30min • 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="sport-badge running">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <div class="perf-info">
+                            <h4>Marathon de Paris</h4>
+                            <p>42.2km • 3h 45min • 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="sport-badge climbing">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="perf-info">
+                            <h4>Climbing Championship</h4>
+                            <p>Level 7a+ • Regional Champion</p>
+                        </div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="sport-badge skiing">
+                            <i class="fas fa-skiing"></i>
+                        </div>
+                        <div class="perf-info">
+                            <h4>Nordic Ski Race</h4>
+                            <p>30km • 1h 45min • 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="sport-badge triathlon">
+                            <i class="fas fa-swimmer"></i>
+                        </div>
+                        <div class="perf-info">
+                            <h4>Ironman 70.3</h4>
+                            <p>1.9km + 90km + 21km • 2024</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="results-timeline">
-                <h3><i class="fas fa-trophy"></i> Key Achievements</h3>
-                <div class="timeline-item">
-                    <div class="timeline-year">2024</div>
-                    <div class="timeline-content">
-                        <h4>Ironman 70.3</h4>
-                        <p>Half Ironman completion - 1.9km swim, 90km bike, 21km run</p>
+            <!-- Right Column: Photo Grid -->
+            <div class="photos-grid-compact">
+                <div class="photo-compact">
+                    <img src="./images/hero.png" alt="Cycling">
+                    <div class="photo-label">
+                        <i class="fas fa-bicycle"></i>
+                        <span>Cycling</span>
                     </div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-year">2023</div>
-                    <div class="timeline-content">
-                        <h4>Olympic Distance Triathlon</h4>
-                        <p>Multiple podium finishes in regional competitions</p>
+                <div class="photo-compact">
+                    <img src="./images/hero.png" alt="Running">
+                    <div class="photo-label">
+                        <i class="fas fa-running"></i>
+                        <span>Running</span>
                     </div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-year">2022</div>
-                    <div class="timeline-content">
-                        <h4>Marathon Achievement</h4>
-                        <p>First marathon completed - Personal best time</p>
+                <div class="photo-compact">
+                    <img src="./images/hero.png" alt="Climbing">
+                    <div class="photo-label">
+                        <i class="fas fa-mountain"></i>
+                        <span>Climbing</span>
                     </div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-year">2021</div>
-                    <div class="timeline-content">
-                        <h4>Sprint Triathlon Series</h4>
-                        <p>Introduction to triathlon - 5 races completed</p>
+                <div class="photo-compact">
+                    <img src="./images/hero.png" alt="Skiing">
+                    <div class="photo-label">
+                        <i class="fas fa-skiing"></i>
+                        <span>Skiing</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="athletic-photos">
-            <div class="photo-item">
-                <img src="./images/hero.png" alt="Training">
-                <span class="photo-caption">Training Session</span>
-            </div>
-            <div class="photo-item">
-                <img src="./images/hero.png" alt="Race Day">
-                <span class="photo-caption">Race Day</span>
-            </div>
-            <div class="photo-item">
-                <img src="./images/hero.png" alt="Finish Line">
-                <span class="photo-caption">Finish Line</span>
-            </div>
+        <!-- View All Button -->
+        <div class="view-all-container">
+            <a href="../athletic/index.html" class="btn view-all-btn">
+                <i class="fas fa-list-ul"></i> View All Performances
+            </a>
         </div>
     </div>
 </section>
