@@ -10,8 +10,8 @@
       "distance": "",
       "time": "",
       "position": "",
-      "main_image": "./images/A_venir.jpg",
-      "bib_image": "./images/A_venir.jpg",
+  "main_image": "images/A_venir.jpg",
+  "bib_image": "images/A_venir.jpg",
       "details": "Solidarity race pulling children with disabilities in adapted running strollers, allowing them to experience the joy and excitement of participating in this sporting event alongside able-bodied runners"
     },
     {
@@ -24,8 +24,8 @@
       "distance": "",
       "time": "",
       "position": "",
-      "main_image": "./images/A_venir.jpg",
-      "bib_image": "./images/A_venir.jpg",
+  "main_image": "images/A_venir.jpg",
+  "bib_image": "images/A_venir.jpg",
       "details": ""
     },
     {
@@ -39,8 +39,8 @@
       "elevation": "3163m",
       "time": "4h43min56s",
       "position": "53e/222",
-      "main_image": "./images/JPP.jpg",
-      "bib_image": "./bibs/2025_velo_JPP.jpg",
+  "main_image": "images/JPP.jpg",
+  "bib_image": "bibs/2025_velo_JPP.jpg",
       "details": "Charity cycling event supporting heart disease research and awareness, featuring challenging Alpine climbs"
     },
     {
@@ -52,8 +52,8 @@
       "distance": "43km",
       "time": "",
       "position": "DNF (9km)",
-      "main_image": "./images/Les_Gets.jpg",
-      "bib_image": "./bibs/2025_trail_gets.jpg",
+  "main_image": "images/Les_Gets.jpg",
+  "bib_image": "bibs/2025_trail_Gets.jpg",
       "details": "",
       "activity_type": "performance"
     },
@@ -78,8 +78,8 @@
         "bike": "590m"
       },
       "position": "31e/224",
-      "main_image": "./images/Tri_Rumilly.jpg",
-      "bib_image": "./bibs/2025_tri_rumilly.jpg",
+  "main_image": "images/Tri_Rumilly.jpg",
+  "bib_image": "bibs/2025_tri_Rumilly.jpg",
       "details": "",
       "activity_type": "performance"
     },
@@ -92,8 +92,8 @@
       "distance": "21.1km",
       "time": "1h 19min 25s",
       "position": "96e/4054",
-      "main_image": "./images/marathon_geneve.jpg",
-      "bib_image": "./bibs/2025_cap_gva_marathon.jpg",
+  "main_image": "images/Marathon_Geneve.jpg",
+  "bib_image": "bibs/2025_cap_gva_marathon.jpg",
       "details": "",
       "activity_type": "performance"
     },
@@ -106,8 +106,8 @@
       "distance": "10km",
       "time": "39min 45s",
       "position": "17e/1040",
-      "main_image": "./images/rhode_saint_genese.jpg",
-      "bib_image": "./bibs/2025_cap_saint_genese.jpg",
+  "main_image": "images/Rhode_saint_genese.jpg",
+  "bib_image": "bibs/2025_cap_Saint_Genese.jpg",
       "details": "",
       "activity_type": "performance"
     },
@@ -121,8 +121,8 @@
       "time": "1h 44min 08s",
       "elevation": "727m",
       "position": "12e/136",
-      "main_image": "./images/Les_Gets_hiver.jpg",
-      "bib_image": "./bibs/2025_trail_hiver_gets.jpg",
+  "main_image": "images/Les_Gets_hiver.jpg",
+  "bib_image": "bibs/2025_trail_hiver_Gets.jpg",
       "details": "",
       "activity_type": "performance"
     },
@@ -135,8 +135,8 @@
       "distance": "7.3km",
       "time": "28min 17s",
       "position": "373e/499",
-      "main_image": "./images/course_escalade.jpg",
-      "bib_image": "./bibs/2024_cap_escalade_elite.jpg",
+  "main_image": "images/Course_escalade.jpg",
+  "bib_image": "bibs/2024_cap_escalade_elite.jpg",
       "details": "",
       "activity_type": "performance"
     },
@@ -149,8 +149,8 @@
       "distance": "7.0km",
       "time": "25min 17s",
       "position": "29e/381",
-      "main_image": "./images/Vortex.jpg",
-      "bib_image": "./bibs/2024_cap_vortex.jpg",
+  "main_image": "images/Vortex.jpg",
+  "bib_image": "bibs/2024_cap_vortex.jpg",
       "details": "",
       "activity_type": "performance"
     },
@@ -161,7 +161,7 @@
       "type": "race",
       "name": "Octobre Rose",
       "distance": "10km",
-      "main_image": "./images/Octobre_Rose.jpg",
+  "main_image": "images/Octobre_Rose.jpg",
       "bib_image": "",
       "details": "Charity run supporting breast cancer awareness and research",
       "activity_type": "solidarity"
@@ -188,8 +188,8 @@
         "run": "330m"
       },
       "position": "438e/1622",
-      "main_image": "./images/Tri_Huez.jpg",
-      "bib_image": "./bibs/2024_tri_Huez.jpg",
+  "main_image": "images/Tri_Huez.jpg",
+  "bib_image": "bibs/2024_tri_Huez.jpg",
       "details": "",
       "activity_type": "performance"
     },
@@ -214,8 +214,8 @@
         "bike": "623m"
       },
       "position": "95e/447",
-      "main_image": "./images/Tri_Troyes.jpg",
-      "bib_image": "./bibs/2024_tri_troyes.jpg",
+  "main_image": "images/Tri_Troyes.jpg",
+  "bib_image": "bibs/2024_tri_Troyes.jpg",
       "details": "",
       "activity_type": "performance"
     },
@@ -240,8 +240,8 @@
         "bike": "531m"
       },
       "position": "48e/229",
-      "main_image": "./images/Tri_Rumilly.jpg",
-      "bib_image": "./bibs/2024_tri_rumilly.jpg",
+  "main_image": "images/Tri_Rumilly.jpg",
+  "bib_image": "bibs/2024_tri_Rumilly.jpg",
       "details": "",
       "activity_type": "performance"
     },
@@ -254,8 +254,8 @@
       "distance": "20km",
       "time": "1h 20min 58s",
       "position": "178e/4075",
-      "main_image": "./images/20km_Lausanne_2024.jpg",
-      "bib_image": "./bibs/2024_cap_20km_Lausanne.jpg",
+  "main_image": "images/20km_Lausanne_2024.jpg",
+  "bib_image": "bibs/2024_cap_20km_Lausanne.jpg",
       "details": "",
       "activity_type": "performance"
     },
@@ -268,8 +268,8 @@
       "distance": "",
       "time": "",
       "position": "",
-      "main_image": "./images/Engadin.jpg",
-      "bib_image": "./bibs/2024_ski_Engadin.jpg",
+  "main_image": "images/Engadin.jpg",
+  "bib_image": "bibs/2024_ski_Engadin.jpg",
       "details": "",
       "activity_type": "performance"
     },
@@ -282,8 +282,8 @@
       "distance": "20.40km",
       "time": "1h 26min 49s",
       "position": "498e/4581",
-      "main_image": "./images/Course_du_duc.jpg",
-      "bib_image": "./bibs/2023_cap_escalade_duc.jpg",
+  "main_image": "images/Course_du_duc.jpg",
+  "bib_image": "bibs/2023_cap_escalade_duc.jpg",
       "details": "",
       "activity_type": "performance"
     },
@@ -296,8 +296,8 @@
       "distance": "6.82km",
       "time": "26min 22s",
       "position": "33e/267",
-      "main_image": "./images/Vortex.jpg",
-      "bib_image": "./bibs/2023_cap_vortex.jpg",
+  "main_image": "images/Vortex.jpg",
+  "bib_image": "bibs/2023_cap_vortex.jpg",
       "details": "",
       "activity_type": "performance"
     },
@@ -310,7 +310,7 @@
       "distance": "180km",
       "time": "",
       "position": "",
-      "main_image": "./images/TMB.jpg",
+  "main_image": "images/TMB.jpg",
       "bib_image": "",
       "details": "Multi-day hiking adventure around Mont Blanc, crossing France, Italy, and Switzerland through spectacular Alpine scenery",
       "activity_type": "adventure"
@@ -325,8 +325,8 @@
       "time": "7h 22min 55s",
       "position": "2093e/11028",
       "elevation": "3953m",
-      "main_image": "./images/EDT.jpg",
-      "bib_image": "./bibs/2023_velo_EDT.jpg",
+  "main_image": "images/EDT.jpg",
+  "bib_image": "bibs/2023_velo_EDT.jpg",
       "details": "",
       "activity_type": "performance"
     },
@@ -339,8 +339,8 @@
       "distance": "20km",
       "time": "1h 38min 26s",
       "position": "1197e/3171",
-      "main_image": "./images/20km_Lausanne.jpg",
-      "bib_image": "./bibs/2023_cap_20km_lausanne.jpg",
+  "main_image": "images/20km_Lausanne.jpg",
+  "bib_image": "bibs/2023_cap_20km_Lausanne.jpg",
       "details": "",
       "activity_type": "performance"
     },
@@ -353,7 +353,7 @@
       "distance": "",
       "time": "",
       "position": "",
-      "main_image": "./images/GTJ.jpg",
+  "main_image": "images/GTJ.jpg",
       "bib_image": "",
       "details": "3-day cross-country skiing adventure traversing the Jura mountains, covering over 100km through pristine winter landscapes",
       "activity_type": "adventure"
@@ -368,8 +368,8 @@
       "time": "5h15min",
       "elevation": "3140m",
       "position": "",
-      "main_image": "./images/Salève.jpg",
-      "bib_image": "./bibs/2022_velo_4s.jpg",
+  "main_image": "images/Salève.jpg",
+  "bib_image": "bibs/2022_velo_4s.jpg",
       "details": "",
       "activity_type": "performance"
     },
@@ -380,7 +380,7 @@
       "type": "adventure",
       "name": "Le Coureur des Bois",
       "distance": "160km",
-      "main_image": "./images/Coureur_bois.jpg",
+  "main_image": "images/Coureur_bois.jpg",
       "bib_image": "",
       "details": "Cross-country skiing adventure exploring forest trails and backcountry routes in winter conditions",
       "activity_type": "adventure"
