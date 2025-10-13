@@ -167,7 +167,7 @@ async function showProjects(projects) {
         
         projectHTML += `
         <div class="box tilt">
-            <img draggable="false" src="projects/images/${project.image}.png" alt="${project.name}" />
+            <img draggable="false" src="projects/images/${project.image}.jpg" alt="${project.name}" />
             <div class="project-title-overlay">
                 <h3>${project.name}</h3>
             </div>

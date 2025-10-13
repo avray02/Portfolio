@@ -88,7 +88,7 @@ async function showAllProjects(filter = 'all') {
         
         projectHTML += `
         <div class="box">
-            <img draggable="false" src="./images/${project.image}.png" alt="${project.name}" />
+            <img draggable="false" src="./images/${project.image}.jpg" alt="${project.name}" />
             <div class="project-title-overlay">
                 <h3>${project.name}</h3>
             </div>
