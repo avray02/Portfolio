@@ -1,7 +1,6 @@
 {
   "performances": [
     {
-      "id": 21,
       "sport": "running",
       "year": 2025,
       "month": 11,
@@ -13,10 +12,9 @@
       "position": "",
       "main_image": "./images/A_venir.jpg",
       "bib_image": "./images/A_venir.jpg",
-      "details": ""
+      "details": "Solidarity race pulling children with disabilities in adapted running strollers, allowing them to experience the joy and excitement of participating in this sporting event alongside able-bodied runners"
     },
     {
-      "id": 20,
       "sport": "running",
       "year": 2025,
       "month": 10,
@@ -31,7 +29,6 @@
       "details": ""
     },
     {
-      "id": 19,
       "sport": "cycling",
       "year": 2025,
       "month": 7,
@@ -44,7 +41,7 @@
       "position": "53e/222",
       "main_image": "./images/JPP.jpg",
       "bib_image": "./bibs/2025_velo_JPP.jpg",
-      "details": ""
+      "details": "Charity cycling event supporting heart disease research and awareness, featuring challenging Alpine climbs"
     },
     {
       "sport": "trail",
@@ -67,17 +64,19 @@
       "type": "race",
       "name": "Triathlon de Rumilly",
       "distance": {
-                    "swim": "1.5km",
-                    "bike": "40.6km",
-                    "run": "8.9km"
-                  },
+        "swim": "1.5km",
+        "bike": "40.6km",
+        "run": "8.9km"
+      },
       "time": {
-                "swim": "32min 05s",
-                "bike": "1h 11min 14s",
-                "run": "36min 58s",
-                "total": "2h 23min 05s"
-              },
-      "elevation": {"bike": "590m"},
+        "swim": "32min 05s",
+        "bike": "1h 11min 14s",
+        "run": "36min 58s",
+        "total": "2h 23min 05s"
+      },
+      "elevation": {
+        "bike": "590m"
+      },
       "position": "31e/224",
       "main_image": "./images/Tri_Rumilly.jpg",
       "bib_image": "./bibs/2025_tri_rumilly.jpg",
@@ -164,7 +163,7 @@
       "distance": "10km",
       "main_image": "./images/Octobre_Rose.jpg",
       "bib_image": "",
-      "details": "",
+      "details": "Charity run supporting breast cancer awareness and research",
       "activity_type": "solidarity"
     },
     {
@@ -174,18 +173,20 @@
       "type": "race",
       "name": "Triathlon de l'Alpe d'Huez",
       "distance": {
-                    "swim": "2.2km",
-                    "bike": "120km",
-                    "run": "19.5km"
-                  },
+        "swim": "2.2km",
+        "bike": "120km",
+        "run": "19.5km"
+      },
       "time": {
-                "swim": "51min 04s",
-                "bike": "5h 20min 25s",
-                "run": "1h 51min 46s",
-                "total": "8h 10min 03s"
-              },
-      "elevation": {"bike": "3200m",
-                    "run": "330m"},
+        "swim": "51min 04s",
+        "bike": "5h 20min 25s",
+        "run": "1h 51min 46s",
+        "total": "8h 10min 03s"
+      },
+      "elevation": {
+        "bike": "3200m",
+        "run": "330m"
+      },
       "position": "438e/1622",
       "main_image": "./images/Tri_Huez.jpg",
       "bib_image": "./bibs/2024_tri_Huez.jpg",
@@ -199,17 +200,19 @@
       "type": "race",
       "name": "Triathlon de Troyes",
       "distance": {
-                    "swim": "1.9km",
-                    "bike": "88km",
-                    "run": "21km"
-                  },
+        "swim": "1.9km",
+        "bike": "88km",
+        "run": "21km"
+      },
       "time": {
-                "swim": "37min 48s",
-                "bike": "2h 36min 18s",
-                "run": "1h 35min 17s",
-                "total": "4h 54min 50s"
-              },
-      "elevation": {"bike": "623m"},
+        "swim": "37min 48s",
+        "bike": "2h 36min 18s",
+        "run": "1h 35min 17s",
+        "total": "4h 54min 50s"
+      },
+      "elevation": {
+        "bike": "623m"
+      },
       "position": "95e/447",
       "main_image": "./images/Tri_Troyes.jpg",
       "bib_image": "./bibs/2024_tri_troyes.jpg",
@@ -223,17 +226,19 @@
       "type": "race",
       "name": "Triathlon de Rumilly",
       "distance": {
-                    "swim": "1.5km",
-                    "bike": "37km",
-                    "run": "8.9km"
-                  },
+        "swim": "1.5km",
+        "bike": "37km",
+        "run": "8.9km"
+      },
       "time": {
-                "swim": "30min 51s",
-                "bike": "1h 05min 39s",
-                "run": "38min 33s",
-                "total": "2h 18min 05s"
-              },
-      "elevation": {"bike": "531m"},
+        "swim": "30min 51s",
+        "bike": "1h 05min 39s",
+        "run": "38min 33s",
+        "total": "2h 18min 05s"
+      },
+      "elevation": {
+        "bike": "531m"
+      },
       "position": "48e/229",
       "main_image": "./images/Tri_Rumilly.jpg",
       "bib_image": "./bibs/2024_tri_rumilly.jpg",
@@ -297,6 +302,20 @@
       "activity_type": "performance"
     },
     {
+      "sport": "hiking",
+      "year": 2023,
+      "month": 8,
+      "type": "adventure",
+      "name": "Tour du Mont Blanc",
+      "distance": "180km",
+      "time": "",
+      "position": "",
+      "main_image": "./images/TMB.jpg",
+      "bib_image": "",
+      "details": "Multi-day hiking adventure around Mont Blanc, crossing France, Italy, and Switzerland through spectacular Alpine scenery",
+      "activity_type": "adventure"
+    },
+    {
       "sport": "cycling",
       "year": 2023,
       "month": 7,
@@ -326,6 +345,20 @@
       "activity_type": "performance"
     },
     {
+      "sport": "skiing",
+      "year": 2023,
+      "month": 3,
+      "type": "adventure",
+      "name": "Grande Traversée du Jura",
+      "distance": "",
+      "time": "",
+      "position": "",
+      "main_image": "./images/GTJ.jpg",
+      "bib_image": "",
+      "details": "3-day cross-country skiing adventure traversing the Jura mountains, covering over 100km through pristine winter landscapes",
+      "activity_type": "adventure"
+    },
+    {
       "sport": "cycling",
       "year": 2022,
       "month": 8,
@@ -346,40 +379,10 @@
       "month": 1,
       "type": "adventure",
       "name": "Le Coureur des Bois",
+      "distance": "160km",
       "main_image": "./images/Coureur_bois.jpg",
       "bib_image": "",
-      "details": "Aventure ski de fond",
-      "activity_type": "adventure"
-    },
-
-    {
-      "id": 23,
-      "sport": "hiking",
-      "year": 2021,
-      "month": 8,
-      "type": "adventure",
-      "name": "Tour du Mont Blanc",
-      "distance": "",
-      "time": "",
-      "position": "",
-      "main_image": "./images/TMB.jpg",
-      "bib_image": "",
-      "details": "Tour du Mont Blanc à pied",
-      "activity_type": "adventure"
-    },
-    {
-      "id": 22,
-      "sport": "skiing",
-      "year": 2021,
-      "month": 2,
-      "type": "adventure",
-      "name": "Grande Traversée du Jura",
-      "distance": "",
-      "time": "",
-      "position": "",
-      "main_image": "./images/GTJ.jpg",
-      "bib_image": "",
-      "details": "Traversée du Jura à ski de fond",
+      "details": "Cross-country skiing adventure exploring forest trails and backcountry routes in winter conditions",
       "activity_type": "adventure"
     }
   ]

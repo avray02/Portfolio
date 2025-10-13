@@ -55,6 +55,24 @@ $(document).ready(function () {
             });
         }
     });
+
+    // Mobile touch/click support for overlay
+    $(document).on('click', '.timeline-card', function(e) {
+        e.stopPropagation();
+        
+        // Remove active class from all other cards
+        $('.timeline-card').not(this).removeClass('active');
+        
+        // Toggle active class on this card
+        $(this).toggleClass('active');
+    });
+
+    // Close overlay when clicking outside
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest('.timeline-card').length) {
+            $('.timeline-card').removeClass('active');
+        }
+    });
 });
 
 // Function to load performances from JSON
@@ -417,7 +435,7 @@ function createTimelineItem(perf, delay) {
                     ${imageHTML}
                     <div class="card-info">
                         <h3>${perf.name}</h3>
-                        ${perf.details ? `<p>${perf.details}</p>` : ''}
+                        ${(perf.details && activityType !== 'adventure' && activityType !== 'solidarity') ? `<p>${perf.details}</p>` : ''}
                         <div class="activity-type-badge ${activityType}">
                             <i class="fas ${activityIcon}"></i>
                             <span>${activityLabel}</span>

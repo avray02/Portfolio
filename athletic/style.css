@@ -497,7 +497,7 @@ header .navbar ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(14, 36, 49, 0.92);
+    background: rgba(14, 36, 49, 0.85);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -527,6 +527,19 @@ header .navbar ul li a:hover {
 }
 
 .timeline-card:hover .stats-overlay {
+    opacity: 1;
+}
+
+/* Mobile support: active class for touch devices */
+.timeline-card.active .main-image {
+    opacity: 0;
+}
+
+.timeline-card.active .bib-image {
+    opacity: 1;
+}
+
+.timeline-card.active .stats-overlay {
     opacity: 1;
 }
 
