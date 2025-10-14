@@ -52,6 +52,10 @@
         "icon": "skills/images/cpp.png"
     },
     {
+        "name": "C",
+        "icon": "skills/images/c.png"
+    },
+    {
         "name": "CATIA V5",
         "icon": "skills/images/dassault.png"
     }    
