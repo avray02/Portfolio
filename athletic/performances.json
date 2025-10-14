@@ -1,6 +1,20 @@
 {
   "performances": [
     {
+      "sport": "trail",
+      "year": 2026,
+      "month": 1,
+      "type": "race",
+      "activity_type": "performance",
+      "name": "Trail hiver des Gets",
+      "distance": "",
+      "time": "",
+      "position": "",
+      "main_image": "images/A_venir.jpg",
+      "bib_image": "images/A_venir.jpg",
+      "details": ""
+    },
+    {
       "sport": "running",
       "year": 2025,
       "month": 11,
@@ -10,8 +24,8 @@
       "distance": "",
       "time": "",
       "position": "",
-  "main_image": "images/A_venir.jpg",
-  "bib_image": "images/A_venir.jpg",
+      "main_image": "images/A_venir.jpg",
+      "bib_image": "images/A_venir.jpg",
       "details": "Solidarity race pulling children with disabilities in adapted running strollers, allowing them to experience the joy and excitement of participating in this sporting event alongside able-bodied runners"
     },
     {
@@ -24,8 +38,8 @@
       "distance": "",
       "time": "",
       "position": "",
-  "main_image": "images/A_venir.jpg",
-  "bib_image": "images/A_venir.jpg",
+      "main_image": "images/A_venir.jpg",
+      "bib_image": "images/A_venir.jpg",
       "details": ""
     },
     {
