@@ -39,9 +39,10 @@
       "elevation": "3163m",
       "time": "4h43min56s",
       "position": "53e/222",
-  "main_image": "images/JPP.jpg",
-  "bib_image": "bibs/2025_velo_JPP.jpg",
-      "details": "Charity cycling event supporting heart disease research and awareness, featuring challenging Alpine climbs"
+      "main_image": "images/JPP.jpg",
+      "bib_image": "bibs/2025_velo_JPP.jpg",
+      "details": "Charity cycling event supporting heart disease research and awareness, featuring challenging Alpine climbs",
+      "is_top": true
     },
     {
       "sport": "trail",
@@ -52,8 +53,8 @@
       "distance": "43km",
       "time": "",
       "position": "DNF (9km)",
-  "main_image": "images/Les_Gets.jpg",
-  "bib_image": "bibs/2025_trail_Gets.jpg",
+      "main_image": "images/Les_Gets.jpg",
+      "bib_image": "bibs/2025_trail_Gets.jpg",
       "details": "",
       "activity_type": "performance"
     },
@@ -78,10 +79,11 @@
         "bike": "590m"
       },
       "position": "31e/224",
-  "main_image": "images/Tri_Rumilly.jpg",
-  "bib_image": "bibs/2025_tri_Rumilly.jpg",
+      "main_image": "images/Tri_Rumilly.jpg",
+      "bib_image": "bibs/2025_tri_Rumilly.jpg",
       "details": "",
-      "activity_type": "performance"
+      "activity_type": "performance",
+      "is_top": true
     },
     {
       "sport": "running",
@@ -92,10 +94,11 @@
       "distance": "21.1km",
       "time": "1h 19min 25s",
       "position": "96e/4054",
-  "main_image": "images/Marathon_Geneve.jpg",
-  "bib_image": "bibs/2025_cap_gva_marathon.jpg",
+      "main_image": "images/Marathon_Geneve.jpg",
+      "bib_image": "bibs/2025_cap_gva_marathon.jpg",
       "details": "",
-      "activity_type": "performance"
+      "activity_type": "performance",
+      "is_top": true
     },
     {
       "sport": "running",

@@ -119,56 +119,9 @@
             <!-- Left Column: Top Performances Table -->
             <div class="performances-table-container">
                 <h3><i class="fas fa-trophy"></i> Top Performances</h3>
-                <div class="performances-table">
-                    <div class="table-row">
-                        <div class="sport-badge cycling">
-                            <i class="fas fa-bicycle"></i>
-                        </div>
-                        <div class="perf-info">
-                            <h4>Tour de France Amateur</h4>
-                            <p>150km • 4h 30min • 2024</p>
-                        </div>
-                    </div>
-
-                    <div class="table-row">
-                        <div class="sport-badge running">
-                            <i class="fas fa-running"></i>
-                        </div>
-                        <div class="perf-info">
-                            <h4>Marathon de Paris</h4>
-                            <p>42.2km • 3h 45min • 2024</p>
-                        </div>
-                    </div>
-
-                    <div class="table-row">
-                        <div class="sport-badge climbing">
-                            <i class="fas fa-mountain"></i>
-                        </div>
-                        <div class="perf-info">
-                            <h4>Climbing Championship</h4>
-                            <p>Level 7a+ • Regional Champion</p>
-                        </div>
-                    </div>
-
-                    <div class="table-row">
-                        <div class="sport-badge skiing">
-                            <i class="fas fa-skiing"></i>
-                        </div>
-                        <div class="perf-info">
-                            <h4>Nordic Ski Race</h4>
-                            <p>30km • 1h 45min • 2024</p>
-                        </div>
-                    </div>
-
-                    <div class="table-row">
-                        <div class="sport-badge triathlon">
-                            <i class="fas fa-swimmer"></i>
-                        </div>
-                        <div class="perf-info">
-                            <h4>Ironman 70.3</h4>
-                            <p>1.9km + 90km + 21km • 2024</p>
-                        </div>
-                    </div>
+                <div class="performances-table" id="top-performances-list">
+                    <!-- Performances will be loaded dynamically from performances.json -->
+                    <div class="loading-message">Loading top performances...</div>
                 </div>
             </div>
 
@@ -216,96 +169,110 @@
 <!-- athletic journey section ends -->
 
 <!-- community impact section starts -->
-<section class="community-impact" id="community">
-    <h2 class="heading"><i class="fas fa-heart"></i> Community <span>& Solidarity</span></h2>
+<section class="community" id="community">
+  <h2 class="heading"><i class="fas fa-heart"></i> Community <span>& Solidarity</span></h2>
 
-    <div class="community-timeline">
-        <div class="timeline-intro">
-            <p>"People grow strongest when we lift others and create spaces of inclusion"</p>
+  <div class="timeline">
+    <div class="container right" data-type="community">
+      <div class="content">
+        <div class="community-image">
+          <img src="./images/EPFLRT_team.jpg" alt="Charity run event">
         </div>
-
-        <div class="dual-timeline-container">
-            <!-- Left Line: Sport & Community -->
-            <div class="timeline-axis left-axis">
-                <div class="axis-header">
-                    <div class="axis-icon sport">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Community</h3>
-                </div>
-                <div class="axis-line"></div>
-            </div>
-
-            <!-- Right Line: Solidarity & Inclusion -->
-            <div class="timeline-axis right-axis">
-                <div class="axis-header">
-                    <div class="axis-icon solidarity">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Solidarity</h3>
-                </div>
-                <div class="axis-line"></div>
-            </div>
-
-            <!-- Central Content will go here -->
-            
-        
+        <div class="community-text">
+          <div class="tag">
+            <h2>Community Project</h2>
+          </div>
+          <div class="desc">
+            <h3>Organized a local charity run</h3>
+            <p>Raised funds for underprivileged children.</p>
+          </div>
         </div>
+      </div>
     </div>
+
+    <div class="container left" data-type="solidarity">
+      <div class="content">
+        <div class="community-text">
+          <div class="tag">
+            <h2>Solidarity Initiative</h2>
+          </div>
+          <div class="desc">
+            <h3>Volunteered at a food bank</h3>
+            <p>Distributed meals to families in need.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- community impact section ends -->
 
 <!-- discovery & learning section starts -->
 <section class="discovery-learning" id="discovery">
-    <h2 class="heading"><i class="fas fa-compass"></i> Discovery & <span>Learning</span></h2>
+    <h2 class="heading"><i class="fas fa-compass"></i> Discovering & <span>Learning</span></h2>
 
     <div class="discovery-content">
         <div class="discovery-intro">
-            <p>An insatiable curiosity drives me to explore new places, learn about climate science, and understand sustainable solutions for our planet's future. Every journey is an opportunity to grow and discover.</p>
+            <p>I love learning and exploring through personal projects. Every discovery feeds my curiosity and shapes who I am.</p>
         </div>
 
-        <div class="discovery-grid">
-            <div class="discovery-card">
-                <div class="discovery-icon">
-                    <i class="fas fa-globe-europe"></i>
-                </div>
-                <h3>Travel & Exploration</h3>
-                <p>Discovering new cultures, landscapes, and perspectives through travel. Each destination teaches something new about the world and myself.</p>
-                <div class="discovery-highlights">
-                    <span><i class="fas fa-map-marked-alt"></i> Cultural Immersion</span>
-                    <span><i class="fas fa-hiking"></i> Nature Exploration</span>
-                </div>
-            </div>
-
-            <div class="discovery-card">
-                <div class="discovery-icon">
-                    <i class="fas fa-leaf"></i>
-                </div>
-                <h3>Climate & Environment</h3>
-                <p>Passionate about understanding climate science and environmental challenges. Actively learning about sustainability and how we can protect our planet for future generations.</p>
-                <div class="discovery-highlights">
-                    <span><i class="fas fa-book-reader"></i> Climate Science</span>
-                    <span><i class="fas fa-seedling"></i> Sustainability</span>
+        <div class="circular-puzzle">
+            <!-- Exploration Piece -->
+            <div class="puzzle-piece" data-piece="exploration">
+                <div class="piece-content">
+                    <div class="piece-image">
+                        <!-- TODO: Remplacer par travel.jpg -->
+                        <img src="./images/skier2.jpg" alt="Exploration and Travel">
+                    </div>
+                    <div class="piece-overlay">
+                        <div class="piece-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <h3>Exploration</h3>
+                        <p>Discovering new horizons, cultures, and landscapes that broaden my perspective.</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="discovery-card">
-                <div class="discovery-icon">
-                    <i class="fas fa-lightbulb"></i>
+            <!-- Learning Piece -->
+            <div class="puzzle-piece" data-piece="learning">
+                <div class="piece-content">
+                    <div class="piece-image">
+                        <!-- TODO: Remplacer par robot-project.jpg -->
+                        <img src="./images/EPFLRT_team.jpg" alt="Learning through Projects">
+                    </div>
+                    <div class="piece-overlay">
+                        <div class="piece-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Learning</h3>
+                        <p>Building and creating personal projects to understand how things work.</p>
+                    </div>
                 </div>
-                <h3>Continuous Learning</h3>
-                <p>Always seeking new knowledge and skills. From aviation mechanics to environmental engineering, every field offers insights that can make a difference.</p>
-                <div class="discovery-highlights">
-                    <span><i class="fas fa-brain"></i> New Skills</span>
-                    <span><i class="fas fa-certificate"></i> Growth Mindset</span>
+            </div>
+
+            <!-- Climate Piece -->
+            <div class="puzzle-piece" data-piece="climate">
+                <div class="piece-content">
+                    <div class="piece-image">
+                        <!-- TODO: Remplacer par climate.jpg -->
+                        <img src="./images/climber.jpg" alt="Climate Awareness">
+                    </div>
+                    <div class="piece-overlay">
+                        <div class="piece-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Climate</h3>
+                        <p>Caring about our planet and seeking sustainable solutions for the future.</p>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="discovery-quote">
             <i class="fas fa-quote-left"></i>
-            <p>"The only source of knowledge is experience."</p>
-            <span class="quote-author">- Albert Einstein</span>
+            <p>"The capacity to learn is a gift; the ability to learn is a skill; the willingness to learn is a choice."</p>
+            <span class="quote-author">- Brian Herbert</span>
         </div>
     </div>
 </section>

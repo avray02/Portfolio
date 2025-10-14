@@ -44,7 +44,7 @@ $(document).ready(function () {
         });
 
         // Animate elements on scroll
-        $('.pillar-icon-item, .impact-box, .discovery-card, .photo-item, .timeline-item').each(function() {
+        $('.pillar-icon-item, .impact-box, .puzzle-piece, .photo-item, .timeline-item').each(function() {
             let elementTop = $(this).offset().top;
             let elementBottom = elementTop + $(this).outerHeight();
             let viewportTop = $(window).scrollTop();
@@ -141,6 +141,113 @@ document.onkeydown = function (e) {
     }
 }
 
+// Load top performances from JSON
+function loadTopPerformances() {
+    $.getJSON('../athletic/performances.json', function(data) {
+        const topPerformances = data.performances.filter(perf => perf.is_top === true);
+        const container = $('#top-performances-list');
+        container.empty();
+
+        if (topPerformances.length === 0) {
+            container.html('<p style="text-align: center; padding: 2rem;">No top performances selected yet.</p>');
+            return;
+        }
+
+        topPerformances.forEach(perf => {
+            const sportIcon = getSportIcon(perf.sport);
+            const performanceDetails = formatPerformanceDetails(perf);
+            
+            // Special handling for triathlon badge with 3 icons
+            let sportBadgeHTML = '';
+            if (perf.sport === 'triathlon') {
+                sportBadgeHTML = `
+                    <div class="sport-badge ${perf.sport}">
+                        <div class="tri-top">
+                            <i class="fas fa-swimmer"></i>
+                        </div>
+                        <div class="tri-bottom">
+                            <i class="fas fa-bicycle"></i>
+                            <i class="fas fa-running"></i>
+                        </div>
+                    </div>
+                `;
+            } else {
+                sportBadgeHTML = `
+                    <div class="sport-badge ${perf.sport}">
+                        <i class="${sportIcon}"></i>
+                    </div>
+                `;
+            }
+            
+            const rowHtml = `
+                <div class="table-row">
+                    ${sportBadgeHTML}
+                    <div class="perf-info">
+                        <h4>${perf.name}</h4>
+                        <p>${performanceDetails}</p>
+                    </div>
+                </div>
+            `;
+            container.append(rowHtml);
+        });
+    }).fail(function() {
+        $('#top-performances-list').html('<p style="text-align: center; padding: 2rem; color: #ff6b6b;">Error loading performances</p>');
+    });
+}
+
+function getSportIcon(sport) {
+    const icons = {
+        'running': 'fas fa-running',
+        'cycling': 'fas fa-bicycle',
+        'trail': 'fas fa-mountain',
+        'triathlon': 'fas fa-swimmer',
+        'skiing': 'fas fa-skiing',
+        'climbing': 'fas fa-mountain'
+    };
+    return icons[sport] || 'fas fa-trophy';
+}
+
+function formatPerformanceDetails(perf) {
+    let details = [];
+    
+    // Distance
+    if (perf.distance) {
+        if (typeof perf.distance === 'object') {
+            // Pour triathlon
+            if (perf.distance.swim) details.push(`${perf.distance.swim} + ${perf.distance.bike} + ${perf.distance.run}`);
+        } else {
+            details.push(perf.distance);
+        }
+    }
+    
+    // Time
+    if (perf.time) {
+        if (typeof perf.time === 'object') {
+            // Pour triathlon
+            if (perf.time.total) details.push(perf.time.total);
+        } else {
+            details.push(perf.time);
+        }
+    }
+    
+    // Elevation for cycling
+    if (perf.elevation && typeof perf.elevation === 'string') {
+        details.push(perf.elevation);
+    }
+    
+    // Position
+    if (perf.position && perf.position !== 'DNF') {
+        details.push(perf.position);
+    }
+    
+    // Year
+    if (perf.year) {
+        details.push(perf.year.toString());
+    }
+    
+    return details.join(' • ');
+}
+
 // Add animation on scroll
 const observerOptions = {
     threshold: 0.1,
@@ -158,6 +265,9 @@ const observer = new IntersectionObserver(function(entries) {
 
 // Observe passion boxes and value items
 document.addEventListener('DOMContentLoaded', function() {
+    // Load top performances
+    loadTopPerformances();
+    
     const animatedElements = document.querySelectorAll('.passion-box, .value-item');
     animatedElements.forEach(el => {
         el.style.opacity = '0';
