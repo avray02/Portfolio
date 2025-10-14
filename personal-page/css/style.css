@@ -1,4 +1,12 @@
-﻿/* Personal Page Styles */
+﻿/* Harmonisation palette : orange, violet, bleu nuit, blanc */
+:root {
+  --main-orange: #fc8c05;
+  --main-violet: #7303a7;
+  --main-blue: #0e2431;
+  --main-white: #fff;
+}
+
+/* Personal Page Styles */
 
 /* Scroll animations */
 .pillar-icon-item,
@@ -1009,11 +1017,11 @@
 }
 
 .axis-icon.sport {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #667eea, #764ba2);
 }
 
 .axis-icon.solidarity {
-    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    background: linear-gradient(135deg, #fa709a, #fee140);
 }
 
 .axis-header h3 {
