@@ -492,8 +492,8 @@
     background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
 }
 
-.sport-badge.climbing {
-    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+.sport-badge.trail {
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
 }
 
 .sport-badge.skiing {

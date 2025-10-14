@@ -56,7 +56,8 @@
       "main_image": "images/Les_Gets.jpg",
       "bib_image": "bibs/2025_trail_Gets.jpg",
       "details": "",
-      "activity_type": "performance"
+      "activity_type": "performance",
+      "is_top": true
     },
     {
       "sport": "triathlon",
@@ -109,8 +110,8 @@
       "distance": "10km",
       "time": "39min 45s",
       "position": "17e/1040",
-  "main_image": "images/Rhode_saint_genese.jpg",
-  "bib_image": "bibs/2025_cap_Saint_Genese.jpg",
+      "main_image": "images/Rhode_saint_genese.jpg",
+      "bib_image": "bibs/2025_cap_Saint_Genese.jpg",
       "details": "",
       "activity_type": "performance"
     },

@@ -202,7 +202,6 @@ function getSportIcon(sport) {
         'trail': 'fas fa-mountain',
         'triathlon': 'fas fa-swimmer',
         'skiing': 'fas fa-skiing',
-        'climbing': 'fas fa-mountain'
     };
     return icons[sport] || 'fas fa-trophy';
 }

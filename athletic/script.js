@@ -340,7 +340,7 @@ function createTimelineItem(perf, delay) {
     const sportIcons = {
         'cycling': 'fa-bicycle',
         'running': 'fa-running',
-        'trail': 'fa-hiking',
+        'trail': 'fa-mountain',
         'climbing': 'fa-mountain',
         'skiing': 'fa-skiing',
         'triathlon': 'fa-swimmer'
