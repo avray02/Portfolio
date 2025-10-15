@@ -36,7 +36,7 @@ class PortfolioFooter {
     // Détermine le chemin relatif vers index.html selon la page actuelle
     getBasePath() {
         const path = window.location.pathname;
-        if (path.includes('/projects/') || path.includes('/experience/') || path.includes('/personal-page/')) {
+        if (path.includes('/projects/') || path.includes('/experience/') || path.includes('/personal-page/') || path.includes('/about/')) {
             return '../index.html';
         }
         return 'index.html';

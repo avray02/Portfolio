@@ -561,6 +561,9 @@ header .navbar ul li a:hover {
 }
 .resumebtn {
   margin-top: 6rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 .resumebtn .btn {
   padding: 1.7rem 3rem;
@@ -570,6 +573,10 @@ header .navbar ul li a:hover {
   background: #2506ad;
   box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
   font-family: "Nunito", sans-serif;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 .resumebtn .btn span {
   font-weight: 600;

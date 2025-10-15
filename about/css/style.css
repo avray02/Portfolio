@@ -1,0 +1,1955 @@
+/* About page specific styles */
+
+/* Modern Bento-Box Versatility Grid */
+.versatility-bento {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 1rem;
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Text - spans full width */
+.hero-text {
+    grid-column: 1 / -1;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 1rem;
+    padding: 1.8rem;
+    text-align: center;
+}
+
+.hero-text h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 1.2rem 0;
+    text-transform: none;
+}
+
+.hero-text p {
+    font-size: 1.7rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.95);
+    margin: 0 auto;
+    max-width: 1000px;
+    font-family: 'Nunito', sans-serif;
+    text-transform: none;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+/* Bento Items Base */
+.bento-item {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 1rem;
+    padding: 1.2rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.bento-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    border-color: rgba(255,255,255,0.3);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.card-header i {
+    font-size: 1.6rem;
+    color: #ffd900;
+}
+
+.card-header span {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Education Card */
+.education-card {
+    grid-column: span 4;
+    grid-row: span 2;
+}
+
+.education-card .card-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.education-card .card-content > img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    opacity: 0.4;
+    border-radius: 0.8rem;
+    position: relative;
+}
+
+.education-card .overlay-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1.2rem;
+    right: 1.2rem;
+}
+
+.education-card .card-bottom-link {
+    margin-top: 1rem;
+}
+
+.overlay-text h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0.4rem 0;
+    text-transform: none;
+}
+
+.pill-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.pill-tags span {
+    background: rgba(255,217,0,0.2);
+    border: 1px solid rgba(255,217,0,0.4);
+    color: #ffd900;
+    padding: 0.25rem 0.6rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: none;
+}
+
+/* Sports Card */
+.sports-card {
+    grid-column: span 4;
+    grid-row: span 2;
+}
+
+.sports-card .card-content {
+    position: relative;
+}
+
+.sport-stack {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+
+.sport-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 0.8rem;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.sport-item:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,123,0,0.4);
+}
+
+.sport-item img {
+    width: 48px;
+    height: 48px;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.sport-item span {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.sport-item i {
+    color: #ff7b00;
+    font-size: 1.1rem;
+}
+
+.card-bottom-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background: rgba(255,123,0,0.15);
+    border: 1px solid rgba(255,123,0,0.3);
+    border-radius: 0.8rem;
+    color: #ffd900;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.card-bottom-link:hover {
+    background: rgba(255,123,0,0.25);
+    border-color: rgba(255,123,0,0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255,123,0,0.2);
+}
+
+.card-bottom-link i {
+    font-size: 1.3rem;
+}
+
+/* Override for white background sections */
+#ouverture .card-bottom-link {
+    background: rgba(255,123,0,0.1);
+    border: 1px solid rgba(255,123,0,0.25);
+    color: #ff7b00;
+}
+
+#ouverture .card-bottom-link:hover {
+    background: rgba(255,123,0,0.2);
+    border-color: rgba(255,123,0,0.4);
+}
+
+/* Music Card */
+.music-card {
+    grid-column: span 4;
+    grid-row: span 2;
+    background: linear-gradient(135deg, rgba(138,43,226,0.15), rgba(75,0,130,0.15));
+}
+
+.music-card .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+.music-visual {
+    width: 55px;
+    height: 55px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.music-visual i {
+    font-size: 2.5rem;
+    color: #ffd900;
+}
+
+.music-text h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0.2rem 0;
+    text-transform: none;
+}
+
+.music-text p {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.7);
+    margin: 0;
+    text-transform: none;
+}
+
+/* Global Mindset Bento Grid */
+.global-bento {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 1rem;
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Override hero-text for white background sections */
+#ouverture .hero-text {
+    background: rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+#ouverture .hero-text h3 {
+    color: #002057;
+}
+
+#ouverture .hero-text p {
+    color: rgba(0,0,0,0.9);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-family: 'Nunito', sans-serif;
+}
+
+#ouverture .bento-item {
+    background: rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+#ouverture .card-header i {
+    color: #ff7b00;
+}
+
+#ouverture .card-header span {
+    color: #002057;
+}
+
+/* Exchange Card */
+.exchange-card {
+    grid-column: span 4;
+    grid-row: span 2;
+}
+
+.exchange-card .card-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.exchange-card .card-content > img {
+    width: 100%;
+    height: 120px;
+    border-radius: 0.8rem;
+    position: relative;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.exchange-card .overlay-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1.2rem;
+    right: 1.2rem;
+}
+
+.exchange-card .card-bottom-link {
+    margin-top: 1rem;
+}
+
+.exchange-card .overlay-text h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0.3rem 0;
+    text-transform: none;
+}
+
+.exchange-card .overlay-text p {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.8);
+    margin: 0;
+    text-transform: none;
+}
+
+.exchange-card .overlay-text .period {
+    display: inline-block;
+    margin-top: 0.3rem;
+    padding: 0.2rem 0.6rem;
+    background: rgba(255,217,0,0.2);
+    border: 1px solid rgba(255,217,0,0.4);
+    color: #ffd900;
+    border-radius: 2rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Teaching Card */
+.teaching-card {
+    grid-column: span 4;
+    grid-row: span 2;
+}
+
+.teaching-card .card-bottom-link {
+    margin-top: 1rem;
+}
+
+.exp-box {
+    background: #f68c09;
+    border-radius: 0.8rem;
+    padding: 1.2rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.exp-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.exp-box .tag h2 {
+    font-size: 1.4rem;
+    color: #000;
+    margin: 0 0 0.5rem 0;
+    text-transform: none;
+}
+
+.exp-box .desc h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0 0 0.2rem 0;
+    text-transform: none;
+}
+
+.exp-box .desc p {
+    font-size: 1.1rem;
+    color: rgba(0,0,0,0.7);
+    margin: 0;
+    text-transform: none;
+}
+
+.exp-box .desc .period {
+    display: inline-block;
+    margin-top: 0.3rem;
+    font-size: 1rem;
+    color: rgba(0,0,0,0.6);
+    font-style: italic;
+}
+
+/* Solidarity Card */
+.solidarity-card {
+    grid-column: span 4;
+    grid-row: span 2;
+    background: linear-gradient(135deg, rgba(255,20,147,0.08), rgba(255,105,180,0.08));
+}
+
+#ouverture .solidarity-card {
+    background: linear-gradient(135deg, rgba(255,20,147,0.15), rgba(255,105,180,0.15));
+}
+
+.solidarity-events {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 0;
+}
+
+.solidarity-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 0.8rem;
+    padding: 0.7rem;
+    transition: all 0.3s ease;
+}
+
+.solidarity-item:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,20,147,0.3);
+    transform: translateY(-2px);
+}
+
+.solidarity-item > i {
+    font-size: 1.6rem;
+    color: #ff1493;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+.solidarity-item h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 0.2rem 0;
+    text-transform: none;
+}
+
+.solidarity-item p {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.7);
+    margin: 0;
+    text-transform: none;
+    line-height: 1.4;
+}
+
+/* Override for white background sections */
+#ouverture .solidarity-item {
+    background: rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+#ouverture .solidarity-item:hover {
+    background: rgba(0,0,0,0.05);
+    border-color: rgba(255,20,147,0.4);
+}
+
+#ouverture .solidarity-item h4 {
+    color: #002057;
+}
+
+#ouverture .solidarity-item p {
+    color: rgba(0,0,0,0.7);
+}
+
+#ouverture .solidarity-card .card-bottom-link {
+    margin-top: 0.8rem;
+}
+
+/* Project Impact Split Screen Showcase */
+.impact-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.showcase-visual {
+    position: relative;
+}
+
+.visual-container {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    height: 100%;
+    min-height: 350px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.visual-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.visual-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 70%, transparent 100%);
+    padding: 2rem 1.5rem 1.5rem;
+}
+
+/* Project Impact overlay badge */
+#concretisation .overlay-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    background: rgba(229,57,53,0.9);
+    border-radius: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.overlay-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    background: rgba(229,57,53,0.9);
+    border-radius: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.overlay-badge i {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.overlay-badge span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.visual-overlay h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0.5rem 0;
+    text-transform: none;
+}
+
+.visual-overlay p {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.9);
+    margin: 0;
+    line-height: 1.5;
+    text-transform: none;
+}
+
+.showcase-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.2rem;
+}
+
+.info-intro h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 1rem 0;
+    text-transform: none;
+}
+
+.info-intro p {
+    font-size: 1.4rem;
+    color: rgba(255,255,255,0.95);
+    line-height: 1.7;
+    margin: 0;
+    text-transform: none;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-family: 'Nunito', sans-serif;
+}
+
+.info-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.detail-panel {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 0.8rem;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.detail-panel:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.2);
+    transform: translateX(5px);
+}
+
+/* Project Impact panel-icon styles */
+#concretisation .panel-icon {
+    flex-shrink: 0;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #e53935, #ff5252);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#concretisation .panel-icon i {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.panel-content {
+    flex: 1;
+}
+
+/* Project Impact panel content styles */
+#concretisation .panel-content h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0.3rem 0;
+    text-transform: none;
+}
+
+#concretisation .panel-content p {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.9);
+    margin: 0 0 0.4rem 0;
+    text-transform: none;
+}
+
+#concretisation .timeline {
+    display: inline-block;
+    font-size: 0.95rem;
+    padding: 0.2rem 0.6rem;
+    background: rgba(229,57,53,0.2);
+    border: 1px solid rgba(229,57,53,0.4);
+    color: #ff5252;
+    border-radius: 1rem;
+    font-style: italic;
+}
+
+.panel-content h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0.3rem 0;
+    text-transform: none;
+}
+
+.panel-content p {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.7);
+    margin: 0 0 0.4rem 0;
+    text-transform: none;
+}
+
+.timeline {
+    display: inline-block;
+    font-size: 0.95rem;
+    padding: 0.2rem 0.6rem;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.8);
+    border-radius: 1rem;
+    font-style: italic;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Project Impact tag-item styles */
+#concretisation .tag-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    background: rgba(229,57,53,0.15);
+    border: 1px solid rgba(229,57,53,0.3);
+    color: #ff5252;
+    border-radius: 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#concretisation .tag-item:hover {
+    background: rgba(229,57,53,0.25);
+    border-color: rgba(229,57,53,0.5);
+    transform: translateY(-2px);
+}
+
+#concretisation .tag-item i {
+    font-size: 0.9rem;
+    color: #ff5252;
+}
+
+.showcase-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.9rem 1.8rem;
+    background: linear-gradient(135deg, #e53935, #ff5252);
+    border: none;
+    border-radius: 0.6rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    box-shadow: 0 4px 12px rgba(229,57,53,0.3);
+}
+
+.showcase-cta:hover {
+    background: linear-gradient(135deg, #ff5252, #e53935);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(229,57,53,0.4);
+}
+
+.showcase-cta i {
+    font-size: 1.2rem;
+}
+
+/* Field Experience Split Screen */
+.field-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.field-visual {
+    position: relative;
+}
+
+.field-container {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    height: 100%;
+    min-height: 350px;
+    background: linear-gradient(135deg, rgba(255,123,0,0.1), rgba(255,174,0,0.05));
+    box-shadow: 0 4px 20px rgba(255,123,0,0.2);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 1rem;
+    background: rgba(255,255,255,0.8);
+    border: 2px solid rgba(255,123,0,0.2);
+    border-radius: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    background: rgba(255,255,255,0.95);
+    border-color: rgba(255,123,0,0.4);
+    transform: scale(1.05);
+}
+
+.skill-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.skill-item span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #002057;
+    text-align: center;
+}
+
+.field-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 70%, transparent 100%);
+    padding: 2rem 1.5rem 1.5rem;
+}
+
+.overlay-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    background: rgba(255,123,0,0.9);
+    border-radius: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.overlay-badge i {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.overlay-badge span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.field-overlay h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0.5rem 0;
+    text-transform: none;
+}
+
+.field-overlay p {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.9);
+    margin: 0;
+    line-height: 1.5;
+    text-transform: none;
+}
+
+.field-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.2rem;
+}
+
+.field-intro h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #002057;
+    margin: 0 0 1rem 0;
+    text-transform: none;
+}
+
+.field-intro p {
+    font-size: 1.4rem;
+    color: rgba(0,0,0,0.9);
+    line-height: 1.7;
+    margin: 0;
+    text-transform: none;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-family: 'Nunito', sans-serif;
+}
+
+.field-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.field-panel {
+    background: rgba(255,255,255,0.8);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 0.8rem;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.field-panel:hover {
+    background: rgba(255,255,255,0.95);
+    border-color: rgba(0,0,0,0.2);
+    transform: translateX(5px);
+}
+
+.panel-icon {
+    flex-shrink: 0;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #ff7b00, #ffae00);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.human-panel .panel-icon {
+    background: linear-gradient(135deg, #0066cc, #00aaff);
+}
+
+.leroy-panel .panel-icon {
+    background: linear-gradient(135deg, #77b900, #99cc00);
+}
+
+.panel-icon i {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.panel-content {
+    flex: 1;
+}
+
+.panel-content h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #002057;
+    margin: 0 0 0.3rem 0;
+    text-transform: none;
+}
+
+.panel-content p {
+    font-size: 1.05rem;
+    color: rgba(0,0,0,0.7);
+    margin: 0 0 0.4rem 0;
+    text-transform: none;
+}
+
+.timeline {
+    display: inline-block;
+    font-size: 0.95rem;
+    padding: 0.2rem 0.6rem;
+    background: rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.1);
+    color: rgba(0,0,0,0.6);
+    border-radius: 1rem;
+    font-style: italic;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    background: rgba(0,102,204,0.1);
+    border: 1px solid rgba(0,102,204,0.2);
+    color: #0066cc;
+    border-radius: 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.tag-item:hover {
+    background: rgba(0,102,204,0.15);
+    border-color: rgba(0,102,204,0.3);
+    transform: translateY(-2px);
+}
+
+.tag-item i {
+    font-size: 0.9rem;
+}
+
+.field-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.9rem 1.8rem;
+    background: linear-gradient(135deg, #ff7b00, #ffae00);
+    border: none;
+    border-radius: 0.6rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    box-shadow: 0 4px 12px rgba(255,123,0,0.3);
+}
+
+.field-cta:hover {
+    background: linear-gradient(135deg, #ffae00, #ff7b00);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(255,123,0,0.4);
+}
+
+.field-cta i {
+    font-size: 1.2rem;
+}
+
+/* Technical Skills Card */
+.tech-skills-card {
+    grid-column: span 5;
+    grid-row: span 2;
+}
+
+.tech-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.tech-skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 0.8rem;
+    padding: 0.7rem 0.4rem;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.tech-skill-item:hover {
+    background: rgba(0,0,0,0.05);
+    border-color: rgba(255,123,0,0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tech-skill-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.tech-skill-item span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #002057;
+}
+
+/* Human Skills Card */
+.human-skills-card {
+    grid-column: span 4;
+    grid-row: span 2;
+}
+
+.human-skills-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.human-skill-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    background: rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 0.8rem;
+    padding: 0.7rem 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.human-skill-pill:hover {
+    background: rgba(0,0,0,0.05);
+    border-color: rgba(255,123,0,0.4);
+    transform: translateX(5px);
+}
+
+.human-skill-pill i {
+    color: #ff7b00;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.human-skill-pill span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #002057;
+}
+
+/* Leroy Merlin Card */
+.leroy-card {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+/* Override bento items for light background */
+#terrain .bento-item {
+    background: rgba(0,0,0,0.02);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+#terrain .bento-item:hover {
+    background: rgba(0,0,0,0.04);
+    border-color: rgba(0,0,0,0.15);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+}
+
+#terrain .hero-text {
+    background: rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+#terrain .hero-text h3 {
+    color: #002057;
+}
+
+#terrain .hero-text p {
+    color: rgba(0,0,0,0.9);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-family: 'Nunito', sans-serif;
+}
+
+#terrain .card-header i {
+    color: #ff7b00;
+}
+
+#terrain .card-header span {
+    color: #002057;
+}
+
+#terrain .card-bottom-link {
+    background: rgba(255,123,0,0.1);
+    border: 1px solid rgba(255,123,0,0.25);
+    color: #ff7b00;
+}
+
+#terrain .card-bottom-link:hover {
+    background: rgba(255,123,0,0.2);
+    border-color: rgba(255,123,0,0.4);
+}
+
+/* Project Impact Bento Grid */
+.impact-bento {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 1rem;
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Racing Card */
+.racing-card {
+    grid-column: span 5;
+    grid-row: span 2;
+}
+
+.racing-card .card-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.racing-card .card-content > img {
+    width: 100%;
+    height: 120px;
+    border-radius: 0.8rem;
+    object-fit: cover;
+    opacity: 0.5;
+    position: relative;
+}
+
+.racing-card .overlay-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1.2rem;
+    right: 1.2rem;
+}
+
+.racing-card .overlay-text h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0.4rem 0;
+    text-transform: none;
+}
+
+.racing-card .overlay-text p {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.8);
+    margin: 0;
+    text-transform: none;
+}
+
+.racing-card .card-bottom-link {
+    margin-top: 1rem;
+}
+
+/* Role Card */
+.role-card {
+    grid-column: span 7;
+    grid-row: span 2;
+}
+
+/* Skills Card */
+.skills-card {
+    grid-column: span 12;
+    grid-row: span 1;
+    background: linear-gradient(135deg, rgba(229,57,53,0.15), rgba(198,40,40,0.15));
+}
+
+.skills-stack {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+
+.skill-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 0.8rem;
+    padding: 0.6rem 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.skill-pill:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(229,57,53,0.4);
+    transform: translateY(-2px);
+}
+
+.skill-pill i {
+    color: #e53935;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.skill-pill span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+}
+
+/* Rolex Portfolio Gallery */
+.rolex-gallery {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.gallery-banner {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.8rem;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.banner-icon {
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #ffd900, #a37e2c);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(255,217,0,0.3);
+}
+
+.banner-icon i {
+    font-size: 2.8rem;
+    color: #000;
+}
+
+.banner-content {
+    flex: 1;
+}
+
+.banner-content h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0.8rem 0;
+    text-transform: none;
+}
+
+.banner-content p {
+    font-size: 1.4rem;
+    color: rgba(255,255,255,0.95);
+    line-height: 1.7;
+    margin: 0 0 1.2rem 0;
+    text-transform: none;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-family: 'Nunito', sans-serif;
+}
+
+.banner-meta {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    background: rgba(255,217,0,0.15);
+    border: 1px solid rgba(255,217,0,0.3);
+    border-radius: 2rem;
+    color: #ffd900;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.meta-item i {
+    font-size: 1.1rem;
+}
+
+.projects-showcase {
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 1.2rem;
+    padding: 1.8rem;
+}
+
+.showcase-title {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 1.5rem 0;
+    text-transform: none;
+}
+
+.showcase-title i {
+    font-size: 1.5rem;
+    color: #ffd900;
+}
+
+.projects-grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.gallery-project {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.gallery-project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    border-color: rgba(255,217,0,0.3);
+}
+
+.project-visual {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.project-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.gallery-project:hover .project-visual img {
+    transform: scale(1.05);
+}
+
+.project-tag {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,217,0,0.3);
+    border-radius: 2rem;
+    color: #ffd900;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.project-tag i {
+    font-size: 0.9rem;
+}
+
+.project-description {
+    padding: 1.2rem;
+}
+
+.project-description h5 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0.5rem 0;
+    text-transform: none;
+}
+
+.project-description p {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.7);
+    margin: 0;
+    line-height: 1.5;
+    text-transform: none;
+}
+
+.gallery-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.gallery-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.9rem 1.8rem;
+    border-radius: 0.6rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.gallery-btn:not(.secondary) {
+    background: linear-gradient(135deg, #ffd900, #a37e2c);
+    color: #000;
+    box-shadow: 0 4px 12px rgba(255,217,0,0.3);
+}
+
+.gallery-btn:not(.secondary):hover {
+    background: linear-gradient(135deg, #a37e2c, #ffd900);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(255,217,0,0.4);
+}
+
+.gallery-btn.secondary {
+    background: rgba(255,255,255,0.08);
+    border: 2px solid rgba(255,255,255,0.2);
+    color: #fff;
+}
+
+.gallery-btn.secondary:hover {
+    background: rgba(255,255,255,0.15);
+    border-color: rgba(255,255,255,0.3);
+    transform: translateY(-3px);
+}
+
+.gallery-btn i {
+    font-size: 1.15rem;
+}
+
+/* Building Today Bento Grid */
+.building-bento {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 1rem;
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Robot Card */
+.robot-card {
+    grid-column: span 6;
+    grid-row: span 2;
+}
+
+/* Portfolio Card */
+.portfolio-card {
+    grid-column: span 6;
+    grid-row: span 2;
+}
+
+/* Skills Integration Section */
+.skills-integration h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #002057;
+    margin: 0 0 1rem 0;
+    text-transform: none;
+}
+
+.integration-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.7rem;
+}
+
+.integration-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 0.8rem;
+    padding: 1rem 0.8rem;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.integration-item:hover {
+    background: rgba(0,0,0,0.05);
+    border-color: rgba(255,123,0,0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.integration-item i {
+    font-size: 2rem;
+    color: #ff7b00;
+}
+
+.integration-item span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #002057;
+}
+
+/* Override bento items for light background */
+#aujourdhui .bento-item {
+    background: rgba(0,0,0,0.02);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+#aujourdhui .bento-item:hover {
+    background: rgba(0,0,0,0.04);
+    border-color: rgba(0,0,0,0.15);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+}
+
+#aujourdhui .hero-text {
+    background: rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+#aujourdhui .hero-text h3 {
+    color: #002057;
+}
+
+#aujourdhui .hero-text p {
+    color: rgba(0,0,0,0.9);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-family: 'Nunito', sans-serif;
+}
+
+#aujourdhui .card-header i {
+    color: #ff7b00;
+}
+
+#aujourdhui .card-header span {
+    color: #002057;
+}
+
+/* Scroll to Top Button - matching main page style */
+#scroll-top {
+    position: fixed;
+    top: -140%;
+    right: 2rem;
+    padding: 1rem 1.5rem;
+    font-size: 2rem;
+    background: #ffae00;
+    color: rgb(13, 0, 44);
+    border-radius: 50%;
+    transition: 1s linear;
+    z-index: 1000;
+}
+
+#scroll-top.active {
+    top: calc(100% - 12rem);
+}
+
+/* Back to Home Button - matching projects page style but adapted for light background */
+.back-to-home {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+    padding-bottom: 3rem;
+    background: transparent;
+}
+
+.back-to-home .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 3rem;
+    font-size: 1.7rem;
+    color: #002057;
+    background: rgba(255, 174, 0, 0.1);
+    border: 0.2rem solid #ffae00;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+}
+
+.back-to-home .btn:hover {
+    background: #ffd900;
+    border-color: #ffd900;
+    color: #000;
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.5rem 1.5rem rgba(255, 217, 0, 0.4);
+}
+
+.back-to-home .btn i {
+    font-size: 1.8rem;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .versatility-bento,
+    .global-bento,
+    .building-bento {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1.2rem;
+        padding: 1.5rem;
+    }
+    
+    .education-card,
+    .exchange-card,
+    .racing-card,
+    .tech-skills-card,
+    .rolex-projects-container,
+    .robot-card {
+        grid-column: span 6;
+    }
+    
+    .sports-card,
+    .teaching-card,
+    .role-card,
+    .human-skills-card,
+    .rolex-exp-card,
+    .portfolio-card {
+        grid-column: span 6;
+    }
+    
+    .music-card,
+    .solidarity-card,
+    .skills-card,
+    .leroy-card {
+        grid-column: span 6;
+    }
+}
+
+@media (max-width: 600px) {
+    .versatility-bento,
+    .global-bento,
+    .building-bento {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .hero-text h3 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-text p {
+        font-size: 1.5rem;
+    }
+    
+    .info-intro h3,
+    .field-intro h3 {
+        font-size: 1.8rem;
+    }
+    
+    .info-intro p,
+    .field-intro p {
+        font-size: 1.2rem;
+    }
+    
+    .banner-content h3 {
+        font-size: 2rem;
+    }
+    
+    .banner-content p {
+        font-size: 1.2rem;
+    }
+    
+    .education-card,
+    .sports-card,
+    .music-card,
+    .exchange-card,
+    .teaching-card,
+    .solidarity-card,
+    .racing-card,
+    .role-card,
+    .skills-card,
+    .tech-skills-card,
+    .human-skills-card,
+    .leroy-card,
+    .rolex-projects-container,
+    .rolex-exp-card,
+    .robot-card,
+    .portfolio-card {
+        grid-column: 1 / -1;
+    }
+    
+    .rolex-projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .education-card .card-content,
+    .exchange-card .card-content,
+    .racing-card .card-content {
+        height: 180px;
+    }
+    
+    .solidarity-events {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-stack {
+        grid-template-columns: 1fr;
+    }
+    
+    .tech-skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .back-to-home .btn {
+        padding: 1.2rem 2rem;
+        font-size: 1.5rem;
+    }
+    
+    /* Global Features Responsive */
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .intro-statement {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .feature-panel {
+        padding: 1rem;
+    }
+    
+    .feature-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .feature-icon i {
+        font-size: 1.8rem;
+    }
+    
+    /* Impact Showcase Responsive */
+    .impact-showcase {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .visual-container {
+        min-height: 300px;
+    }
+    
+    .visual-overlay h3 {
+        font-size: 1.6rem;
+    }
+    
+    .info-intro h3 {
+        font-size: 1.4rem;
+    }
+    
+    .info-intro p {
+        font-size: 1.1rem;
+    }
+    
+    .showcase-cta {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* Field Stack Responsive */
+    .stack-intro {
+        font-size: 1.2rem;
+    }
+    
+    .showcase-skills {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .showcase-human-skills {
+        grid-template-columns: 1fr;
+    }
+    
+    .header-info h3 {
+        font-size: 1.5rem;
+    }
+    
+    /* Rolex Gallery Responsive */
+    .gallery-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+    
+    .banner-icon {
+        margin: 0 auto;
+    }
+    
+    .banner-content h3 {
+        font-size: 1.6rem;
+    }
+    
+    .banner-meta {
+        justify-content: center;
+    }
+    
+    .projects-grid-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-actions {
+        flex-direction: column;
+    }
+    
+    .gallery-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* Global Bento Responsive */
+    .global-bento {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    .exchange-card, .teaching-card, .solidarity-card {
+        grid-column: span 3;
+    }
+    
+    /* Field Showcase Responsive */
+    .field-showcase {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .field-container {
+        min-height: 300px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .field-overlay h3 {
+        font-size: 1.6rem;
+    }
+    
+    .field-intro h3 {
+        font-size: 1.4rem;
+    }
+    
+    .field-intro p {
+        font-size: 1.1rem;
+    }
+    
+    .field-cta {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
