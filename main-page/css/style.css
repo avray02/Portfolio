@@ -276,6 +276,14 @@ header .navbar ul li a:hover {
   align-items: center;
   max-width: 100%;
 }
+.home .image .hero-link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  gap: 1.5rem;
+}
 .home .image img {
   max-width: min(80%, 50rem);
   width: 100%;
@@ -287,6 +295,50 @@ header .navbar ul li a:hover {
 }
 .home .image img:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.home .image .hero-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.2rem 2.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+  animation: pulse 2s ease-in-out infinite;
+}
+.home .image .hero-link:hover .hero-cta {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+  animation: none;
+}
+.home .image .hero-cta i {
+  font-size: 2rem;
+  color: #ffd700;
+  animation: point 1.5s ease-in-out infinite;
+}
+.home .image .hero-cta span {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: none;
+  letter-spacing: 0.05rem;
+}
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+@keyframes point {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
 }
 .home .content h2 {
   font-size: 5rem;
@@ -414,6 +466,16 @@ header .navbar ul li a:hover {
   .home .image img {
     max-width: min(70%, 35rem);
   }
+  .home .image .hero-cta {
+    padding: 1rem 2rem;
+    gap: 0.6rem;
+  }
+  .home .image .hero-cta span {
+    font-size: 1.4rem;
+  }
+  .home .image .hero-cta i {
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -456,6 +518,19 @@ header .navbar ul li a:hover {
   }
   .home .image img {
     max-width: min(60%, 30rem);
+  }
+  .home .image .hero-link {
+    gap: 1rem;
+  }
+  .home .image .hero-cta {
+    padding: 0.8rem 1.5rem;
+    gap: 0.5rem;
+  }
+  .home .image .hero-cta span {
+    font-size: 1.2rem;
+  }
+  .home .image .hero-cta i {
+    font-size: 1.5rem;
   }
 }
 /* hero media queries ends*/
@@ -535,6 +610,9 @@ header .navbar ul li a:hover {
 }
 .resumebtn {
   margin-top: 6rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 .resumebtn .btn {
   padding: 1.7rem 3rem;

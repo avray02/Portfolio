@@ -7,10 +7,10 @@
     <meta name="keywords" content="Alexandre VRAY, portfolio, about, story" />
     <meta name="description" content="L'histoire d'Alexandre – parcours, projets et motivations" />
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style-v2-accordion.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link id='favicon' rel="shortcut icon" href="../assets/images/logo/white.png" type="image/x-png">
-    <title>About | A.Vray</title>
+    <title>About | A.Vray - Accordion</title>
 </head>
 <body oncontextmenu="return false">
 
@@ -85,7 +85,7 @@
     </div>
 
     <!-- Section 2: Versatility -->
-    <div class="accordion-item">
+    <div class="accordion-item active">
         <div class="accordion-header" onclick="toggleAccordion(this)">
             <div class="header-left">
                 <span class="step-num">02</span>
@@ -489,6 +489,15 @@
     </a>
 </div>
 
+<!-- Version Selector -->
+<div class="version-selector">
+    <span>Try different layouts:</span>
+    <a href="index.html" class="version-btn">Original</a>
+    <a href="index-v1-timeline.html" class="version-btn">Timeline</a>
+    <a href="index-v2-accordion.html" class="version-btn active">Accordion</a>
+    <a href="index-v3-tabs.html" class="version-btn">Tabs</a>
+</div>
+
 <!-- scroll top btn -->
 <a href="#" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
 
@@ -499,19 +508,6 @@
 <script src="../assets/js/components/footer.js"></script>
 
 <script>
-// Menu hamburger toggle
-$(document).ready(function () {
-    $('#menu').click(function () {
-        $(this).toggleClass('fa-times');
-        $('.navbar').toggleClass('nav-toggle');
-    });
-
-    $(window).on('scroll load', function () {
-        $('#menu').removeClass('fa-times');
-        $('.navbar').removeClass('nav-toggle');
-    });
-});
-
 function toggleAccordion(header) {
     const item = header.parentElement;
     const wasActive = item.classList.contains('active');
@@ -549,3 +545,4 @@ document.getElementById('scroll-top').addEventListener('click', (e) => {
 
 </body>
 </html>
+

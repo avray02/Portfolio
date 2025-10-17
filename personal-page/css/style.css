@@ -57,13 +57,69 @@
 }
 
 /* Make hero image clickable - keep only 3D tilt effect */
-.home .image a {
-    display: block;
+.home .image .hero-link {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    gap: 1.5rem;
     cursor: pointer;
 }
 
-.home .image a:hover img {
+.home .image .hero-link:hover img {
     filter: brightness(1.05);
+}
+
+/* Hero Call-to-Action Button */
+.home .image .hero-cta {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.2rem 2.5rem;
+    background: linear-gradient(135deg, #fc8c05 0%, #ffe600 100%);
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(252, 140, 5, 0.4);
+    transition: all 0.3s ease;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.home .image .hero-link:hover .hero-cta {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(252, 140, 5, 0.6);
+    animation: none;
+}
+
+.home .image .hero-cta i {
+    font-size: 2rem;
+    color: #0e2431;
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+.home .image .hero-cta span {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #0e2431;
+    text-transform: none;
+    letter-spacing: 0.05rem;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
 }
 
 /* Passions Section */
@@ -1426,6 +1482,25 @@
 
 
 
+@media (max-width: 768px) {
+    .home .image .hero-link {
+        gap: 1rem;
+    }
+
+    .home .image .hero-cta {
+        padding: 1rem 2rem;
+        gap: 0.6rem;
+    }
+
+    .home .image .hero-cta span {
+        font-size: 1.4rem;
+    }
+
+    .home .image .hero-cta i {
+        font-size: 1.8rem;
+    }
+}
+
 @media (max-width: 450px) {
     .personal-hero .content h1 {
         font-size: 3rem;
@@ -1457,6 +1532,24 @@
     /* About section responsive */
     .about .row .image {
         margin-top: 2rem;
+    }
+
+    /* Hero CTA responsive */
+    .home .image .hero-link {
+        gap: 1rem;
+    }
+
+    .home .image .hero-cta {
+        padding: 0.8rem 1.5rem;
+        gap: 0.5rem;
+    }
+
+    .home .image .hero-cta span {
+        font-size: 1.2rem;
+    }
+
+    .home .image .hero-cta i {
+        font-size: 1.5rem;
     }
 
     /* Circular Puzzle Small Screens */
