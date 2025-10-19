@@ -40,7 +40,8 @@
       "position": "62e/488",
       "main_image": "images/Vortex.jpg",
       "bib_image": "bibs/2025_cap_vortex.jpg",
-      "details": ""
+      "details": "",
+      "is_top": true
     },
     {
       "sport": "cycling",
@@ -300,8 +301,8 @@
       "distance": "20.40km",
       "time": "1h 26min 49s",
       "position": "498e/4581",
-  "main_image": "images/Course_du_duc.jpg",
-  "bib_image": "bibs/2023_cap_escalade_duc.jpg",
+      "main_image": "images/Course_du_duc.jpg",
+      "bib_image": "bibs/2023_cap_escalade_duc.jpg",
       "details": "",
       "activity_type": "performance"
     },
@@ -314,8 +315,8 @@
       "distance": "7.0km",
       "time": "26min 22s",
       "position": "33e/267",
-  "main_image": "images/Vortex.jpg",
-  "bib_image": "bibs/2023_cap_vortex.jpg",
+      "main_image": "images/Vortex.jpg",
+      "bib_image": "bibs/2023_cap_vortex.jpg",
       "details": "",
       "activity_type": "performance"
     },
