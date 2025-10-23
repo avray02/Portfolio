@@ -274,4 +274,36 @@ document.addEventListener('DOMContentLoaded', function() {
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     });
+    
+    // Support mobile/tactile pour la section community
+    addCommunityMobileSupport();
 });
+
+// Support mobile/tactile pour la section community
+function addCommunityMobileSupport() {
+    const containers = document.querySelectorAll('.community .container');
+    
+    containers.forEach(container => {
+        container.addEventListener('click', function(e) {
+            // Sur mobile (écrans < 768px), basculer la classe active au clic
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                // Retirer la classe active des autres containers
+                containers.forEach(c => {
+                    if (c !== this) {
+                        c.classList.remove('active');
+                    }
+                });
+                // Basculer la classe active sur le container cliqué
+                this.classList.toggle('active');
+            }
+        });
+    });
+    
+    // Fermer l'overlay si on clique en dehors
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.community .container')) {
+            containers.forEach(c => c.classList.remove('active'));
+        }
+    });
+}

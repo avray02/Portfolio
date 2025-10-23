@@ -224,6 +224,40 @@ function addMobileSupport() {
     });
 }
 
+// Support mobile/tactile pour les expériences
+function addExperienceMobileSupport() {
+    const containers = document.querySelectorAll('.experience .container');
+    
+    containers.forEach(container => {
+        container.addEventListener('click', function(e) {
+            // Sur mobile (écrans < 768px), basculer la classe active au clic
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                // Retirer la classe active des autres containers
+                containers.forEach(c => {
+                    if (c !== this) {
+                        c.classList.remove('active');
+                    }
+                });
+                // Basculer la classe active sur le container cliqué
+                this.classList.toggle('active');
+            }
+        });
+    });
+    
+    // Fermer l'overlay si on clique en dehors
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.experience .container')) {
+            containers.forEach(c => c.classList.remove('active'));
+        }
+    });
+}
+
+// Initialiser le support mobile pour les expériences au chargement
+document.addEventListener('DOMContentLoaded', function() {
+    addExperienceMobileSupport();
+});
+
 fetchData().then(data => {
     showSkills(data);
 });

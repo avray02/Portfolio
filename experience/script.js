@@ -60,3 +60,21 @@ function(){
         $("#favicon").attr("href","/assets/images/favhand.png");
     }
 });
+
+// Support mobile/tactile pour les expériences
+document.querySelectorAll('.experience .container').forEach(container => {
+    container.addEventListener('click', function(e) {
+        // Sur mobile (écrans < 768px), basculer la classe active au clic
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            // Retirer la classe active des autres containers
+            document.querySelectorAll('.experience .container').forEach(c => {
+                if (c !== this) {
+                    c.classList.remove('active');
+                }
+            });
+            // Basculer la classe active sur le container cliqué
+            this.classList.toggle('active');
+        }
+    });
+});

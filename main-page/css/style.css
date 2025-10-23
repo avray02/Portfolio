@@ -1169,6 +1169,32 @@ header .navbar ul li a:hover {
 .experience .content .desc p {
   font-size: 1.2rem;
 }
+/* Experience details on hover */
+.experience .content .experience-details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+  padding: 0 1.5rem;
+}
+.experience .container:hover .content {
+  transform: scale(1.05);
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+.experience .container:hover .experience-details {
+  max-height: 200px;
+  opacity: 1;
+  padding: 0 1.5rem 1rem 1.5rem;
+  margin-top: 0.5rem;
+}
+.experience .experience-details p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 0.5rem 0;
+  text-transform: none;
+  color: #1a1a1a;
+  font-weight: 500;
+}
 /* view all button */
 .morebtn {
   display: flex;
@@ -1238,6 +1264,21 @@ header .navbar ul li a:hover {
   }
   .morebtn {
     margin-top: 3rem;
+  }
+  /* Experience details responsive */
+  .experience .experience-details p {
+    font-size: 1.1rem;
+    margin: 0.4rem 0;
+  }
+  .experience .container:hover .experience-details {
+    max-height: 180px;
+  }
+  /* Support mobile/tactile - afficher les détails au clic */
+  .experience .container.active .experience-details {
+    max-height: 180px;
+    opacity: 1;
+    padding: 0 1.5rem 1rem 1.5rem;
+    margin-top: 0.5rem;
   }
 }
 /* experience media queries ends */

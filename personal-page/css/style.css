@@ -940,6 +940,29 @@
     margin-top: 0.5rem;
 }
 
+/* Community details on hover */
+.community .community-details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+  padding: 0 1.5rem;
+}
+.community .container:hover .community-details {
+  max-height: 200px;
+  opacity: 1;
+  padding: 0 1.5rem 1rem 1.5rem;
+  margin-top: 0.5rem;
+}
+.community .community-details p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 0.5rem 0;
+  text-transform: none;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 500;
+}
+
 /* Responsive: Mobile */
 @media (max-width: 768px) {
     .athletic-grid-compact {
@@ -1019,6 +1042,22 @@
 
     .community .community-text {
         flex: 1;
+    }
+    
+    /* Community details responsive */
+    .community .community-details p {
+        font-size: 1.1rem;
+        margin: 0.4rem 0;
+    }
+    .community .container:hover .community-details {
+        max-height: 180px;
+    }
+    /* Support mobile/tactile - afficher les détails au clic */
+    .community .container.active .community-details {
+        max-height: 180px;
+        opacity: 1;
+        padding: 0 1.5rem 1rem 1.5rem;
+        margin-top: 0.5rem;
     }
 }
 
