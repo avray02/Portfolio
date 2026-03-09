@@ -343,7 +343,8 @@ function createTimelineItem(perf, delay) {
         'trail': 'fa-mountain',
         'climbing': 'fa-mountain',
         'skiing': 'fa-skiing',
-        'triathlon': 'fa-swimmer'
+        'triathlon': 'fa-swimmer',
+        'backcountry skiing': 'fa-skiing-nordic'
     };
     
     const activityTypeIcons = {

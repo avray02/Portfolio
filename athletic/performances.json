@@ -1,17 +1,32 @@
 {
   "performances": [
     {
-      "sport": "trail",
+      "sport": "running",
       "year": 2026,
-      "month": 1,
+      "month": 5,
       "type": "race",
-      "activity_type": "performance",
-      "name": "Trail hiver des Gets",
-      "distance": "",
+      "activity_type": "solidarity",
+      "name": "Marathon de Genève",
+      "distance": "12.0 km",
       "time": "",
       "position": "",
       "main_image": "images/A_venir.jpg",
       "bib_image": "images/A_venir.jpg",
+      "details": "Solidarity race pulling children with disabilities in adapted running strollers, allowing them to experience the joy and excitement of participating in this sporting event alongside able-bodied runners"
+    },
+    {
+      "sport": "backcountry skiing",
+      "year": 2026,
+      "month": 2,
+      "type": "race",
+      "activity_type": "performance",
+      "name": "Gets les Cannes",
+      "distance": "4.13 km",
+      "elevation": "737m",
+      "time": "48min 51s",
+      "position": "35e/140",
+      "main_image": "images/Les_Gets_hiver.jpg",
+      "bib_image": "bibs/2026_ski_rando_Gets.jpg",
       "details": ""
     },
     {
