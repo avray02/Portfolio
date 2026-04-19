@@ -1,6 +1,20 @@
 {
   "performances": [
     {
+      "sport": "trail",
+      "year": 2026,
+      "month": 7,
+      "type": "race",
+      "name": "Trail des Gets",
+      "distance": "21km",
+      "time": "",
+      "position": "",
+      "main_image": "images/A_Venir.jpg",
+      "bib_image": "images/A_venir.jpg",
+      "details": "",
+      "activity_type": "performance"
+    },
+    {
       "sport": "running",
       "year": 2026,
       "month": 5,
@@ -10,7 +24,7 @@
       "distance": "12.0 km",
       "time": "",
       "position": "",
-      "main_image": "images/Marathon_Geneve.jpg",
+      "main_image": "images/A_Venir.jpg",
       "bib_image": "images/A_venir.jpg",
       "details": "Solidarity race pulling children with disabilities in adapted running strollers, allowing them to experience the joy and excitement of participating in this sporting event alongside able-bodied runners"
     },
@@ -27,7 +41,8 @@
       "position": "35e/140",
       "main_image": "images/Les_Gets_hiver.jpg",
       "bib_image": "bibs/2026_ski_rando_Gets.jpg",
-      "details": ""
+      "details": "",
+      "is_top": true
     },
     {
       "sport": "running",
@@ -41,7 +56,8 @@
       "position": "",
       "main_image": "images/20km_balexert.jpg",
       "bib_image": "bibs/2025_cap_balexert.jpg",
-      "details": "Solidarity race pulling children with disabilities in adapted running strollers, allowing them to experience the joy and excitement of participating in this sporting event alongside able-bodied runners"
+      "details": "Solidarity race pulling children with disabilities in adapted running strollers, allowing them to experience the joy and excitement of participating in this sporting event alongside able-bodied runners",
+      "is_top": true
     },
     {
       "sport": "running",
@@ -113,8 +129,7 @@
       "main_image": "images/Tri_Rumilly.jpg",
       "bib_image": "bibs/2025_tri_Rumilly.jpg",
       "details": "",
-      "activity_type": "performance",
-      "is_top": true
+      "activity_type": "performance"
     },
     {
       "sport": "running",
@@ -128,8 +143,7 @@
       "main_image": "images/Marathon_Geneve.jpg",
       "bib_image": "bibs/2025_cap_gva_marathon.jpg",
       "details": "",
-      "activity_type": "performance",
-      "is_top": true
+      "activity_type": "performance"
     },
     {
       "sport": "running",
