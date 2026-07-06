@@ -9,10 +9,54 @@
       "distance": "21km",
       "time": "",
       "position": "",
-      "main_image": "images/A_Venir.jpg",
+      "main_image": "images/A_venir.jpg",
       "bib_image": "images/A_venir.jpg",
       "details": "",
       "activity_type": "performance"
+    },
+    {
+      "sport": "cycling",
+      "year": 2026,
+      "month": 7,
+      "type": "race",
+      "activity_type": "solidarity",
+      "name": "Cyclo JPP neuf de Coeur",
+      "distance": "130km",
+      "elevation": "3163m",
+      "time": "4h27min46s",
+      "position": "41e/265",
+      "main_image": "images/JPP.jpg",
+      "bib_image": "bibs/2026_velo_JPP.jpg",
+      "details": "Charity cycling event supporting heart disease research and awareness, featuring challenging Alpine climbs",
+      "is_top": true
+    },
+    {
+      "sport": "triathlon",
+      "year": 2026,
+      "month": 6,
+      "type": "race",
+      "name": "Triathlon de Thonon",
+      "distance": {
+        "swim": "750m",
+        "bike": "22.85km",
+        "run": "4.1km"
+      },
+      "time": {
+        "swim": "19min 13s",
+        "bike": "40min 20s",
+        "run": "16min 06s",
+        "total": "1h 17min 25s"
+      },
+      "elevation": {
+        "bike": "324m",
+        "run": "24m"
+      },
+      "position": "6e/112",
+      "main_image": "images/Tri_Thonon.jpg",
+      "bib_image": "bibs/2026_tri_Thonon.jpg",
+      "details": "",
+      "activity_type": "performance",
+      "is_top": true
     },
     {
       "sport": "running",
@@ -24,9 +68,10 @@
       "distance": "12.0 km",
       "time": "",
       "position": "",
-      "main_image": "images/A_Venir.jpg",
-      "bib_image": "images/A_venir.jpg",
-      "details": "Solidarity race pulling children with disabilities in adapted running strollers, allowing them to experience the joy and excitement of participating in this sporting event alongside able-bodied runners"
+      "main_image": "images/Marathon_Geneve.jpg",
+      "bib_image": "bibs/2026_cap_gva_marathon.jpg",
+      "details": "Solidarity race pulling children with disabilities in adapted running strollers, allowing them to experience the joy and excitement of participating in this sporting event alongside able-bodied runners",
+      "is_top": true
     },
     {
       "sport": "backcountry skiing",
@@ -71,8 +116,21 @@
       "position": "62e/488",
       "main_image": "images/Vortex.jpg",
       "bib_image": "bibs/2025_cap_vortex.jpg",
+      "details": ""
+    },
+    {
+      "sport": "trail",
+      "year": 2025,
+      "month": 7,
+      "type": "race",
+      "name": "Trail des Gets",
+      "distance": "43km",
+      "time": "",
+      "position": "DNF (9km)",
+      "main_image": "images/Les_Gets.jpg",
+      "bib_image": "bibs/2025_trail_Gets.jpg",
       "details": "",
-      "is_top": true
+      "activity_type": "performance"
     },
     {
       "sport": "cycling",
@@ -87,23 +145,7 @@
       "position": "53e/222",
       "main_image": "images/JPP.jpg",
       "bib_image": "bibs/2025_velo_JPP.jpg",
-      "details": "Charity cycling event supporting heart disease research and awareness, featuring challenging Alpine climbs",
-      "is_top": true
-    },
-    {
-      "sport": "trail",
-      "year": 2025,
-      "month": 7,
-      "type": "race",
-      "name": "Trail des Gets",
-      "distance": "43km",
-      "time": "",
-      "position": "DNF (9km)",
-      "main_image": "images/Les_Gets.jpg",
-      "bib_image": "bibs/2025_trail_Gets.jpg",
-      "details": "",
-      "activity_type": "performance",
-      "is_top": true
+      "details": "Charity cycling event supporting heart disease research and awareness, featuring challenging Alpine climbs"
     },
     {
       "sport": "triathlon",
