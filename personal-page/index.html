@@ -7,12 +7,12 @@
     <meta name="keywords" content="Alexandre VRAY, personal life, hobbies, triathlon" />
     <meta name="description" content="Découvrez Alexandre au-delà du travail - passions, hobbies et vie personnelle" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../src/styles/shared/base.css">
+    <link rel="stylesheet" href="../src/styles/pages/personal.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Favicon -->
-    <link id='favicon' rel="shortcut icon" href="../assets/images/logo/white.png" type="image/x-png">
+    <link id='favicon' rel="shortcut icon" href="../src/assets/images/logo/white.png" type="image/x-png">
     <title>Personal Life | A.Vray</title>
 </head>
 <body oncontextmenu="return false">
@@ -20,8 +20,8 @@
 <!-- navbar starts -->
 <header>
     <a href="../index.html" class="logo">
-        <img src="../assets/images/logo/black.png" alt="Logo" class="default-logo">
-        <img src="../assets/images/logo/color.png" alt="Logo" class="color-logo"> Alexandre
+        <img src="../src/assets/images/logo/black.png" alt="Logo" class="default-logo">
+        <img src="../src/assets/images/logo/color.png" alt="Logo" class="color-logo"> Alexandre
     </a>
 
     <div id="menu" class="fas fa-bars"></div>
@@ -56,7 +56,7 @@
     
     <div class="image">
         <a href="../index.html" class="hero-link" title="Discover my professional work">
-            <img draggable="false" class="tilt" src="./images/hero.jpg" alt="Alexandre - Personal Life">
+            <img draggable="false" class="tilt" src="../src/assets/images/personal/hero.jpg" alt="Alexandre - Personal Life">
             <div class="hero-cta">
                 <i class="fas fa-briefcase"></i>
                 <span>Click here for my portfolio</span>
@@ -72,7 +72,7 @@
     
     <div class="row">
         <div class="image">
-            <img draggable="false" class="tilt" src="./images/cyclist2.jpg" alt="Alexandre - Personal Life">
+            <img draggable="false" class="tilt" src="../src/assets/images/personal/cyclist2.jpg" alt="Alexandre - Personal Life">
             <!-- <img draggable="false" class="tilt" src="./images/cyclist2.jpg" alt="Alexandre - Personal Life"> -->
         </div>
         
@@ -138,28 +138,28 @@
             <!-- Right Column: Photo Grid -->
             <div class="photos-grid-compact">
                 <div class="photo-compact">
-                    <img src="./images/cyclist.jpg" alt="Cycling">
+                    <img src="../src/assets/images/personal/cyclist.jpg" alt="Cycling">
                     <div class="photo-label">
                         <i class="fas fa-bicycle"></i>
                         <span>Cycling</span>
                     </div>
                 </div>
                 <div class="photo-compact">
-                    <img src="./images/runner.jpg" alt="Running">
+                    <img src="../src/assets/images/personal/runner.jpg" alt="Running">
                     <div class="photo-label">
                         <i class="fas fa-running"></i>
                         <span>Running</span>
                     </div>
                 </div>
                 <div class="photo-compact">
-                    <img src="./images/climber.jpg" alt="Climbing">
+                    <img src="../src/assets/images/personal/climber.jpg" alt="Climbing">
                     <div class="photo-label">
                         <i class="fas fa-mountain"></i>
                         <span>Climbing</span>
                     </div>
                 </div>
                 <div class="photo-compact">
-                    <img src="./images/skier.jpg" alt="Skiing">
+                    <img src="../src/assets/images/personal/skier.jpg" alt="Skiing">
                     <div class="photo-label">
                         <i class="fas fa-skiing"></i>
                         <span>Skiing</span>
@@ -225,7 +225,7 @@
     <div class="container left" data-type="community">
       <div class="content">
         <div class="community-image">
-          <img src="./images/EPFLRT_team.jpg" alt="Charity run event">
+          <img src="../src/assets/images/personal/EPFLRT_team.jpg" alt="Charity run event">
         </div>
         <div class="community-text">
           <div class="tag">
@@ -314,7 +314,7 @@
                 <div class="piece-content">
                     <div class="piece-image">
                         <!-- TODO: Remplacer par travel.jpg -->
-                        <img src="./images/wales.jpg" alt="Exploration and Travel">
+                        <img src="../src/assets/images/personal/wales.jpg" alt="Exploration and Travel">
                     </div>
                     <div class="piece-overlay">
                         <div class="piece-icon">
@@ -337,7 +337,7 @@
                 <div class="piece-content">
                     <div class="piece-image">
                         <!-- TODO: Remplacer par robot-project.jpg -->
-                        <img src="./images/scara.jpg" alt="Learning through Projects">
+                        <img src="../src/assets/images/personal/scara.jpg" alt="Learning through Projects">
                     </div>
                     <div class="piece-overlay">
                         <div class="piece-icon">
@@ -360,7 +360,7 @@
                 <div class="piece-content">
                     <div class="piece-image">
                         <!-- TODO: Remplacer par climate.jpg -->
-                        <img src="./images/climber.jpg" alt="Climate Awareness">
+                        <img src="../src/assets/images/personal/climber.jpg" alt="Climate Awareness">
                     </div>
                     <div class="piece-overlay">
                         <div class="piece-icon">
@@ -425,8 +425,8 @@
 
 <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
-<script src="../assets/js/components/personal-footer.js"></script>
-<script src="./js/script.js"></script>
+<script src="../src/components/personal-footer.js"></script>
+<script src="../src/pages/personal.js"></script>
 
 </body>
 </html>

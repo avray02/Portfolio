@@ -77,7 +77,7 @@ $(document).ready(function () {
 
 // Function to load performances from JSON
 function loadPerformances() {
-    $.getJSON('./performances.json', function(data) {
+    $.getJSON('../src/data/athletic-performances.json', function(data) {
         const container = $('.timeline-container');
         container.empty();
         
@@ -138,7 +138,7 @@ function loadPerformances() {
         });
         
     }).fail(function() {
-        console.error('Error loading performances.json');
+        console.error('Error loading athletic performances');
         $('.timeline-container').html('<p style="text-align:center; color:#fff; font-size:2rem;">Error loading performances. Please try again later.</p>');
     });
 }
@@ -337,6 +337,9 @@ function createStatsOverlay(perf) {
 
 // Function to create a timeline item
 function createTimelineItem(perf, delay) {
+    const imageBasePath = '../src/assets/images/athletic/';
+    const mainImage = `${imageBasePath}${perf.main_image.replace(/^images\//, '')}`;
+    const bibImage = perf.bib_image ? `${imageBasePath}${perf.bib_image.replace(/^images\//, '').replace(/^bibs\//, 'bibs/')}` : '';
     const sportIcons = {
         'cycling': 'fa-bicycle',
         'running': 'fa-running',
@@ -413,15 +416,15 @@ function createTimelineItem(perf, delay) {
     if (perf.bib_image) {
         imageHTML = `
             <div class="timeline-images">
-                <img class="main-image" src="${perf.main_image}" alt="${perf.name}" onerror="this.src='./images/hero.png'">
-                <img class="bib-image" src="${perf.bib_image}" alt="${perf.name} Bib" onerror="this.style.display='none'">
+                <img class="main-image" src="${mainImage}" alt="${perf.name}" onerror="this.style.display='none'">
+                <img class="bib-image" src="${bibImage}" alt="${perf.name} Bib" onerror="this.style.display='none'">
                 ${statsOverlay}
             </div>
         `;
     } else {
         imageHTML = `
             <div class="timeline-images">
-                <img class="main-image" src="${perf.main_image}" alt="${perf.name}" onerror="this.src='./images/hero.png'">
+                <img class="main-image" src="${mainImage}" alt="${perf.name}" onerror="this.style.display='none'">
                 ${statsOverlay}
             </div>
         `;

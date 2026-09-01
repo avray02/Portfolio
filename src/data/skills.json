@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Python",
+        "icon": "src/assets/images/skills/python.png"
+    },
+    {
+        "name": "Pytorch",
+        "icon": "src/assets/images/skills/pytorch.png"
+    },
+    {
+        "name": "Tensorflow",
+        "icon": "src/assets/images/skills/tensorflow.png"
+    },
+    {
+        "name": "Numpy",
+        "icon": "src/assets/images/skills/numpy.png"
+    },
+    {
+        "name": "Pandas",
+        "icon": "src/assets/images/skills/pandas.png"
+    },
+    {
+        "name": "OpenCV",
+        "icon": "src/assets/images/skills/opencv.png"
+    },
+    {
+        "name": "Scikit-image",
+        "icon": "src/assets/images/skills/skimage.png"
+    },
+    {
+        "name": "Dataiku",
+        "icon": "src/assets/images/skills/dataiku.png"
+    },
+    {
+        "name": "SQL",
+        "icon": "src/assets/images/skills/SQL.png"
+    },
+    {
+        "name": "Matlab",
+        "icon": "src/assets/images/skills/matlab.png"
+    },
+    {
+        "name": "Simulink",
+        "icon": "src/assets/images/skills/simulink.png"
+    },
+    {
+        "name": "Labview",
+        "icon": "src/assets/images/skills/labview.png"
+    },
+    {
+        "name": "C++",
+        "icon": "src/assets/images/skills/cpp.png"
+    },
+    {
+        "name": "C",
+        "icon": "src/assets/images/skills/c.png"
+    },
+    {
+        "name": "CATIA V5",
+        "icon": "src/assets/images/skills/dassault.png"
+    }    
+]

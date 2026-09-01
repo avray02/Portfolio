@@ -115,10 +115,10 @@ VanillaTilt.init(document.querySelectorAll(".tilt"), {
 document.addEventListener('visibilitychange', function () {
     if (document.visibilityState === "visible") {
         document.title = "Personal Life | A.Vray";
-        $("#favicon").attr("href", "assets/images/logo/white.png");
+        $("#favicon").attr("href", "../src/assets/images/logo/white.png");
     } else {
         document.title = "Come Back!";
-        $("#favicon").attr("href", "assets/images/logo/white.png");
+        $("#favicon").attr("href", "../src/assets/images/logo/white.png");
     }
 });
 
@@ -143,7 +143,7 @@ document.onkeydown = function (e) {
 
 // Load top performances from JSON
 function loadTopPerformances() {
-    $.getJSON('../athletic/performances.json', function(data) {
+    $.getJSON('../src/data/athletic-performances.json', function(data) {
         const topPerformances = data.performances.filter(perf => perf.is_top === true);
         const container = $('#top-performances-list');
         container.empty();

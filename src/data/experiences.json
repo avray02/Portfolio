@@ -1,0 +1,50 @@
+[
+  {
+    "company": "Rolex SA",
+    "role": "Project Manager | R&D Internship",
+    "period": "Sept 2024 - Sept 2025",
+    "side": "right",
+    "featured": true,
+    "details": [
+      "🎯 Excellence and sharing spirit in high-precision environment",
+      "🎤 Learned to present to varied audiences (technical, production, executives)",
+      "🤝 Developed professional rigor and attention to detail"
+    ]
+  },
+  {
+    "company": "Leroy Merlin",
+    "role": "After-Sales Service | Technician",
+    "period": "Jul 2024 - Aug 2024",
+    "side": "left",
+    "featured": false,
+    "details": [
+      "⚡ Quick adaptation in an understaffed team",
+      "💬 Developed human side through customer service (excellent feedback)",
+      "🔨 Learned autonomy and reactivity under pressure"
+    ]
+  },
+  {
+    "company": "EPFL Racing Team",
+    "role": "Traction Control Engineer | Student Association",
+    "period": "Sept 2022 - Sept 2023",
+    "side": "left",
+    "featured": true,
+    "details": [
+      "🤝 First professional-like experience: teamwork management",
+      "⏰ Strict deadline management (project must work end of year)",
+      "🏎️ Developed technical skills in embedded systems"
+    ]
+  },
+  {
+    "company": "EPFL",
+    "role": "Student Assistant | Mathematics, Physics, ...",
+    "period": "Feb 2021 - Jul 2024",
+    "side": "left",
+    "featured": false,
+    "details": [
+      "💬 Developed communication and pedagogy skills",
+      "👂 Learned active listening and helping students",
+      "🎓 Strengthened my own fundamentals through teaching"
+    ]
+  }
+]

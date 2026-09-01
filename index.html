@@ -7,11 +7,11 @@
     <meta name="keywords" content="Alexandre VRAY, portfolio website, personal portfolio" />
     <meta name="description" content="Welcome to Alexandre's Portfolio. Robotics' Engineer" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./main-page/css/style.css">
+    <link rel="stylesheet" href="./src/styles/pages/home.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Favicon -->
-    <link id='favicon' rel="shortcut icon" href="./assets/images/logo/white.png" type="image/x-png">
+    <link id='favicon' rel="shortcut icon" href="./src/assets/images/logo/white.png" type="image/x-png">
     <title>Portfolio | A.Vray</title>
 </head>
 <body oncontextmenu="return false">
@@ -24,8 +24,8 @@
 
 <!-- navbar starts -->
 <header>
-        <a href="#home" class="logo">  <img src="./assets/images/logo/black.png" alt="Logo", class="default-logo">
-                                   <img src="./assets/images/logo/color.png" alt="Logo", class="color-logo"> Alexandre</a>
+        <a href="#home" class="logo">  <img src="./src/assets/images/logo/black.png" alt="Logo", class="default-logo">
+                                   <img src="./src/assets/images/logo/color.png" alt="Logo", class="color-logo"> Alexandre</a>
         <!-- <i class="fab fa-node-js"></i>  <img src="./assets/images/logo/color.png" alt="Logo", class="hover-img"> -->
 
         <div id="menu" class="fas fa-bars"></div>
@@ -64,7 +64,7 @@
     </div>
 <div class="image">
     <a href="personal-page/index.html" class="hero-link" title="Discover my personal life">
-        <img draggable="false" class="tilt clickable-image" src="./assets/images/bitmoji/hero.webp" alt="Click to know more about me">
+        <img draggable="false" class="tilt clickable-image" src="./src/assets/images/bitmoji/hero.webp" alt="Click to know more about me">
         <div class="hero-cta">
             <i class="fas fa-hand-pointer"></i>
             <span>Click here for my personal life</span>
@@ -82,7 +82,7 @@
     <div class="row">
 
     <div class="image">
-        <img draggable="false" class="tilt" src="./assets/images/profil.png" alt="Alexandre">
+        <img draggable="false" class="tilt" src="./src/assets/images/common/profil.png" alt="Alexandre">
     </div>
     <div class="content">
         <h3>I'm Alexandre</h3>
@@ -99,7 +99,7 @@
         </div>
         
         <div class="resumebtn">
-            <a href="./assets/images/cv.pdf" target="_blank" class="btn"><span>Resume</span> <!-- https://drive.google.com/file/d/1rZiXl562q7aVyk1kJ2nO85YBAq8ixTiw/view -->
+            <a href="./src/assets/documents/cv.pdf" target="_blank" class="btn"><span>Resume</span> <!-- https://drive.google.com/file/d/1rZiXl562q7aVyk1kJ2nO85YBAq8ixTiw/view -->
                 <i class="fas fa-chevron-right"></i>
             </a>
             <a href="./about/index.html" class="btn"><span>My Story</span>
@@ -232,8 +232,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- particle.js links -->
-<script src="./assets/js/particles.min.js"></script>
-<script src="./assets/js/app.js"></script>
+<script src="./src/services/particles.min.js"></script>
+<script src="./src/services/particles-config.js"></script>
 
 <!-- vanilla tilt.js links -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -245,8 +245,8 @@
 
 <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
-<script src="./assets/js/components/footer.js"></script>
-<script src="./main-page/js/script.js"></script>
+<script src="./src/components/footer.js"></script>
+<script src="./src/pages/home.js"></script>
 
 </body>
 </html>

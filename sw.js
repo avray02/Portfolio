@@ -1,24 +1,26 @@
 // Service Worker for Portfolio Website
-const CACHE_NAME = 'portfolio-v1.0.0';
+const CACHE_NAME = 'portfolio-v2.0.0';
 const urlsToCache = [
   '/',
   '/index.html',
-  '/main-page/css/style.css',
-  '/main-page/js/script.js',
+  '/src/styles/pages/home.css',
+  '/src/pages/home.js',
   '/personal-page/index.html',
-  '/personal-page/css/style.css',
-  '/personal-page/js/script.js',
-  '/assets/js/particles.min.js',
-  '/assets/js/app.js',
-  '/assets/js/components/footer.js',
-  '/skills/skills.json',
-  '/education/education.json',
-  '/projects/projects.json',
-  '/assets/images/logo/white.png',
-  '/assets/images/logo/black.png',
-  '/assets/images/logo/color.png',
-  '/assets/images/bitmoji/hero.webp',
-  '/assets/images/profil.png',
+  '/src/styles/pages/personal.css',
+  '/src/pages/personal.js',
+  '/src/services/particles.min.js',
+  '/src/services/particles-config.js',
+  '/src/components/footer.js',
+  '/src/data/skills.json',
+  '/src/data/education.json',
+  '/src/data/projects.json',
+  '/src/data/experiences.json',
+  '/src/data/athletic-performances.json',
+  '/src/assets/images/logo/white.png',
+  '/src/assets/images/logo/black.png',
+  '/src/assets/images/logo/color.png',
+  '/src/assets/images/bitmoji/hero.webp',
+  '/src/assets/images/common/profil.png',
   // Add other critical assets as needed
 ];
 

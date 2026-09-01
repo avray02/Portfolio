@@ -33,7 +33,7 @@ $(document).ready(function () {
 });
 
 async function fetchProjects() {
-    const response = await fetch("./projects.json");
+    const response = await fetch("../src/data/projects.json");
     const data = await response.json();
     return data;
 }
@@ -71,24 +71,24 @@ async function showAllProjects(filter = 'all') {
         // Créer la liste des liens disponibles
         let linksHTML = '';
         if (project.links.report) {
-            linksHTML += `<a href="./reports/${project.links.report}.pdf" class="btn" target="_blank" title="Report">
+            linksHTML += `<a href="../src/assets/documents/project-reports/${project.links.report}.pdf" class="btn" target="_blank" title="Report">
                 <i class="fas fa-file-pdf"></i>
             </a>`;
         }
         if (project.links.poster) {
-            linksHTML += `<a href="./posters/${project.links.poster}.pdf" class="btn" target="_blank" title="Poster">
+            linksHTML += `<a href="../src/assets/documents/project-posters/${project.links.poster}.pdf" class="btn" target="_blank" title="Poster">
                 <i class="fas fa-image"></i>
             </a>`;
         }
         if (project.links.code) {
-            linksHTML += `<a href=".${project.links.code}" class="btn" target="_blank" title="Code">
+            linksHTML += `<a href="${project.links.code.startsWith('http') ? project.links.code : `../src/assets/documents/project-notebooks/${project.links.code.split('/').pop()}`}" class="btn" target="_blank" title="Code">
                 <i class="fas fa-code"></i>
             </a>`;
         }
         
         projectHTML += `
         <div class="box">
-            <img draggable="false" src="./images/${project.image}.jpg" alt="${project.name}" />
+            <img draggable="false" src="../src/assets/images/projects/${project.image}.jpg" alt="${project.name}" />
             <div class="project-title-overlay">
                 <h3>${project.name}</h3>
             </div>

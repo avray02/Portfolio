@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Alexandre VRAY, portfolio, about, story" />
     <meta name="description" content="L'histoire d'Alexandre – parcours, projets et motivations" />
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../src/styles/shared/base.css">
+    <link rel="stylesheet" href="../src/styles/pages/about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link id='favicon' rel="shortcut icon" href="../assets/images/logo/white.png" type="image/x-png">
+    <link id='favicon' rel="shortcut icon" href="../src/assets/images/logo/white.png" type="image/x-png">
     <title>About | A.Vray</title>
 </head>
 <body oncontextmenu="return false">
@@ -17,8 +17,8 @@
 <!-- navbar starts -->
 <header>
     <a href="../index.html#home" class="logo">
-        <img src="../assets/images/logo/black.png" alt="Logo" class="default-logo">
-        <img src="../assets/images/logo/color.png" alt="Logo" class="color-logo"> Alexandre
+        <img src="../src/assets/images/logo/black.png" alt="Logo" class="default-logo">
+        <img src="../src/assets/images/logo/color.png" alt="Logo" class="color-logo"> Alexandre
     </a>
     <div id="menu" class="fas fa-bars"></div>
     <nav class="navbar">
@@ -69,7 +69,7 @@
             <div class="content-wrapper">
                 <div class="content-cols">
                     <div class="col-img">
-                        <img src="../personal-page/images/scara.jpg" alt="Robotic Arm">
+                        <img src="../src/assets/images/personal/scara.jpg" alt="Robotic Arm">
                     </div>
                     <div class="col-text">
                         <p>This page tells my professional journey from academic foundations to my current job search.</p>
@@ -116,7 +116,7 @@
                         </div>
                     </div>
                     <div class="featured-image">
-                        <img src="../education/images/epfl.jpg" alt="EPFL">
+                        <img src="../src/assets/images/education/epfl.jpg" alt="EPFL">
                     </div>
                 </div>
 
@@ -131,19 +131,19 @@
                         </div>
                         <div class="sports-images">
                             <div class="sport-img-item">
-                                <img src="../personal-page/images/cyclist.jpg" alt="Cycling">
+                                <img src="../src/assets/images/personal/cyclist.jpg" alt="Cycling">
                                 <span><i class="fas fa-bicycle"></i> Cycling</span>
                             </div>
                             <div class="sport-img-item">
-                                <img src="../personal-page/images/runner.jpg" alt="Running">
+                                <img src="../src/assets/images/personal/runner.jpg" alt="Running">
                                 <span><i class="fas fa-running"></i> Running</span>
                             </div>
                             <div class="sport-img-item">
-                                <img src="../personal-page/images/skier.jpg" alt="Skiing">
+                                <img src="../src/assets/images/personal/skier.jpg" alt="Skiing">
                                 <span><i class="fas fa-skiing"></i> Skiing</span>
                             </div>
                             <div class="sport-img-item">
-                                <img src="../personal-page/images/climber.jpg" alt="Climbing">
+                                <img src="../src/assets/images/personal/climber.jpg" alt="Climbing">
                                 <span><i class="fas fa-mountain"></i> Climbing</span>
                             </div>
                         </div>
@@ -201,7 +201,7 @@
                     <div class="mini-content">
                         <h4>Exchange</h4>
                         <div class="edu-image">
-                            <img src="../education/images/polymtl.jpg" alt="Polytechnique Montréal">
+                            <img src="../src/assets/images/education/polymtl.jpg" alt="Polytechnique Montréal">
                         </div>
                         <p><strong>Polytechnique Montréal</strong></p>
                         <p>3rd year Electrical Engineering (2021-2022)</p>
@@ -270,14 +270,14 @@
                         </div>
                     </div>
                     <div class="featured-image">
-                        <img src="../education/images/epfl.jpg" alt="EPFL">
+                        <img src="../src/assets/images/education/epfl.jpg" alt="EPFL">
                     </div>
                 </div>
 
                 <!-- Racing Team Section -->
                 <div class="project-showcase">
                     <div class="showcase-image">
-                        <img src="../projects/images/epflrt.jpg" alt="EPFL Racing Team">
+                        <img src="../src/assets/images/projects/epflrt.jpg" alt="EPFL Racing Team">
                         <div class="image-overlay">
                             <span class="overlay-badge"><i class="fas fa-car-side"></i> EPFL Racing Team</span>
                         </div>
@@ -329,14 +329,7 @@
                 <div class="skills-grid">
                     <div class="skill-box">
                         <h5><i class="fas fa-code"></i> Technical Skills</h5>
-                        <div class="tech-icons">
-                            <img src="../skills/images/python.png" alt="Python" title="Python">
-                            <img src="../skills/images/pytorch.png" alt="PyTorch" title="PyTorch">
-                            <img src="../skills/images/tensorflow.png" alt="TensorFlow" title="TensorFlow">
-                            <img src="../skills/images/cpp.png" alt="C++" title="C++">
-                            <img src="../skills/images/opencv.png" alt="OpenCV" title="OpenCV">
-                            <img src="../skills/images/matlab.png" alt="Matlab" title="Matlab">
-                        </div>
+                        <div class="tech-icons" id="about-skills"></div>
                     </div>
 
                     <div class="skill-box">
@@ -390,7 +383,7 @@
                 <h5><i class="fas fa-rocket"></i> Key Projects</h5>
                 <div class="project-row">
                     <div class="project-card">
-                        <img src="../projects/images/watchmaking2.jpg" alt="Quality Control">
+                        <img src="../src/assets/images/projects/watchmaking2.jpg" alt="Quality Control">
                         <div class="project-overlay">
                             <span class="project-label"><i class="fas fa-search"></i> Quality Control</span>
                             <h6>Quality Control AI</h6>
@@ -399,7 +392,7 @@
                     </div>
 
                     <div class="project-card">
-                        <img src="../projects/images/watchmaking.jpg" alt="Rendering">
+                        <img src="../src/assets/images/projects/watchmaking.jpg" alt="Rendering">
                         <div class="project-overlay">
                             <span class="project-label"><i class="fas fa-eye"></i> Rendering</span>
                             <h6>Realistic Rendering</h6>
@@ -494,9 +487,10 @@
 
 <!-- libs -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="../assets/js/particles.min.js"></script>
-<script src="../assets/js/app.js"></script>
-<script src="../assets/js/components/footer.js"></script>
+<script src="../src/services/particles.min.js"></script>
+<script src="../src/services/particles-config.js"></script>
+<script src="../src/components/footer.js"></script>
+<script src="../src/pages/about.js"></script>
 
 <script>
 // Menu hamburger toggle

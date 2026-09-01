@@ -60,11 +60,11 @@ document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
             document.title = "Portfolio | A.VRAY";
-            $("#favicon").attr("href", "assets/images/logo/white.png");
+            $("#favicon").attr("href", "src/assets/images/logo/white.png");
         }
         else {
             document.title = "Come Back To Portfolio";
-            $("#favicon").attr("href", "assets/images/logo/white.png");
+            $("#favicon").attr("href", "src/assets/images/logo/white.png");
         }
     });
 
@@ -82,13 +82,15 @@ var typed = new Typed(".typing-text", {
 async function fetchData(type = "skills") {
     let response
     if (type === "skills") {
-        response = await fetch("skills/skills.json")
+        response = await fetch("src/data/skills.json")
     } else if (type === "config") {
-        response = await fetch("config.json")
+        response = await fetch("src/data/config.json")
     } else if (type === "education") {
-        response = await fetch("education/education.json")
+        response = await fetch("src/data/education.json")
+    } else if (type === "experiences") {
+        response = await fetch("src/data/experiences.json")
     } else {
-        response = await fetch("./projects/projects.json")
+        response = await fetch("src/data/projects.json")
     }
     const data = await response.json();
     return data;
@@ -150,12 +152,12 @@ async function showProjects(projects) {
         // Créer la liste des liens disponibles
         let linksHTML = '';
         if (project.links.report) {
-            linksHTML += `<a href="projects/reports/${project.links.report}.pdf" class="btn" target="_blank" title="Report">
+            linksHTML += `<a href="src/assets/documents/project-reports/${project.links.report}.pdf" class="btn" target="_blank" title="Report">
                 <i class="fas fa-file-pdf"></i>
             </a>`;
         }
         if (project.links.poster) {
-            linksHTML += `<a href="projects/posters/${project.links.poster}.pdf" class="btn" target="_blank" title="Poster">
+            linksHTML += `<a href="src/assets/documents/project-posters/${project.links.poster}.pdf" class="btn" target="_blank" title="Poster">
                 <i class="fas fa-image"></i>
             </a>`;
         }
@@ -167,7 +169,7 @@ async function showProjects(projects) {
         
         projectHTML += `
         <div class="box tilt">
-            <img draggable="false" src="projects/images/${project.image}.jpg" alt="${project.name}" />
+            <img draggable="false" src="src/assets/images/projects/${project.image}.jpg" alt="${project.name}" />
             <div class="project-title-overlay">
                 <h3>${project.name}</h3>
             </div>
@@ -190,6 +192,35 @@ async function showProjects(projects) {
     // Ajouter le support tactile pour mobile
     addMobileSupport();
 
+}
+
+async function showExperiences(experiences) {
+    const timeline = document.querySelector("#experience .timeline");
+    if (!timeline) return;
+
+    const config = await fetchData("config");
+    const featuredCompanies = config.featured?.experiences || [];
+    const maxExperiences = config.display?.maxExperiencesOnHome || 3;
+    const selectedExperiences = experiences
+        .filter(experience => experience.featured || featuredCompanies.includes(experience.company))
+        .slice(0, maxExperiences);
+
+    timeline.innerHTML = `${selectedExperiences.map((experience, index) => `
+        <div class="container ${experience.side || (index % 2 ? 'left' : 'right')}">
+          <div class="content">
+            <div class="tag"><h2>${experience.company}</h2></div>
+            <div class="desc"><h3>${experience.role}</h3><p>${experience.period}</p></div>
+            <div class="experience-details">
+              ${experience.details.map(detail => `<p>${detail}</p>`).join('')}
+            </div>
+          </div>
+        </div>
+    `).join('')}
+    <div class="morebtn">
+      <a href="experience" class="btn"><span>View All</span><i class="fas fa-arrow-right"></i></a>
+    </div>`;
+
+    addExperienceMobileSupport();
 }
 
 // Fonction pour gérer le clic/tap sur mobile
@@ -268,6 +299,10 @@ fetchData("education").then(data => {
 
 fetchData("projects").then(async data => {
     await showProjects(data);
+});
+
+fetchData("experiences").then(data => {
+    showExperiences(data);
 });
 
 // <!-- tilt js effect starts -->
